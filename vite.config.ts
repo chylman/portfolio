@@ -12,7 +12,8 @@ export default defineConfig({
         }),
         createSvgSpritePlugin({
             exportType: 'react',
-            include: '**/icons/*.svg'
+            include: '**/icons/*.svg',
+            symbolId: 'icon-[name]-[hash]',
         }),
     ],
     resolve: {

@@ -1,9 +1,9 @@
-import {Icon} from "../icon/Icon";
+import IconBehance from "../../assets/image/icons/behance.svg"
 
 export const Logo = () => {
     return (
         <a href="">
-            <Icon iconId={"behance"}/>
+            <IconBehance width={"30px"}/>
         </a>
     );
 };
