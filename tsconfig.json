@@ -1,10 +1,16 @@
 {
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
   ],
-  "types": [
-    "vite-plugin-svg-sprite/typings/react"
-  ]
+  "compilerOptions": {
+    "types": [
+      "vite-plugin-svg-sprite/typings/react"
+    ]
+  }
 }

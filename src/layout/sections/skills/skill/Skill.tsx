@@ -1,9 +1,7 @@
-import React, {JSX} from 'react';
-import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
 
 type SkillsPropsType = {
-    icon: JSX
+    icon: any
     title?: string
     description?: string
 }

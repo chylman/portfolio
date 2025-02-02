@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
@@ -10,7 +9,7 @@ export const Contact = () => {
             <StyledForm>
                 <Field placeholder={"name"}></Field>
                 <Field placeholder={"subject"}></Field>
-                <Field placeholder={"message"} as={"textarea"}></Field>
+                <Field placeholder={"message"} as="textarea"></Field>
                 <Button>Send message</Button>
             </StyledForm>
         </StyledContacts>

@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
@@ -17,24 +16,23 @@ import IconVscode from '../../../assets/image/icons/vscode.svg';
 import IconGithub from '../../../assets/image/icons/github.svg';
 
 
-
 export const Skills = () => {
     return (
         <StyledSkills>
             <SectionTitle>My Tech Stack</SectionTitle>
             <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                <Skill icon={<IconHtml5 width={"120px"} height={"120px"}/>}></Skill>
-                <Skill icon={<IconCSS width={"120px"} height={"120px"}/>}></Skill>
-                <Skill icon={<IconJs width={"120px"} height={"120px"}/>}></Skill>
-                <Skill icon={<IconReact width={"113px"} height={"101px"}/>}></Skill>
-                <Skill icon={<IconRedux width={"105px"} height={"100px"}/>}></Skill>
-                <Skill icon={<IconBootstrap width={"88px"} height={"87px"}/>}></Skill>
-                <Skill icon={<IconTailwind width={"131px"} height={"131px"}/>}></Skill>
-                <Skill icon={<IconSass width={"117px"} height={"87px"}/>}></Skill>
-                <Skill icon={<IconGit width={"105px"} height={"105px"}/>}></Skill>
-                <Skill icon={<IconGreensock width={"120px"} height={"120px"}/>}></Skill>
-                <Skill icon={<IconVscode width={"112px"} height={"112px"}/>}></Skill>
-                <Skill icon={<IconGithub width={"88px"} height={"88px"}/>}></Skill>
+                <Skill icon={<IconHtml5/>}></Skill>
+                <Skill icon={<IconCSS/>}></Skill>
+                <Skill icon={<IconJs/>}></Skill>
+                <Skill icon={<IconReact/>}></Skill>
+                <Skill icon={<IconRedux/>}></Skill>
+                <Skill icon={<IconBootstrap/>}></Skill>
+                <Skill icon={<IconTailwind/>}></Skill>
+                <Skill icon={<IconSass/>}></Skill>
+                <Skill icon={<IconGit/>}></Skill>
+                <Skill icon={<IconGreensock/>}></Skill>
+                <Skill icon={<IconVscode/>}></Skill>
+                <Skill icon={<IconGithub/>}></Skill>
             </FlexWrapper>
         </StyledSkills>
     );

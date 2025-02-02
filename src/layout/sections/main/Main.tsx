@@ -1,4 +1,3 @@
-import React from 'react';
 import photo from '../../../assets/image/content/503536831.jpg'
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
@@ -8,7 +7,7 @@ export const Main = () => {
         <StyledMain>
             <FlexWrapper align={"center"} justify={"space-around"}>
                 <div>
-                    <h1>Hi 👋, My name is Ilya Afanasev I build things for web</h1>
+                    <MainTitle>Hi 👋, My name is Ilya Afanasev I build things for web</MainTitle>
                 </div>
                 <Photo src={photo}/>
             </FlexWrapper>

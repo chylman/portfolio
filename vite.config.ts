@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import createSvgSpritePlugin from 'vite-plugin-svg-sprite';
 
 export default defineConfig({
+    base: '/portfolio/',
     plugins: [
         react({
             babel: {
@@ -20,6 +21,6 @@ export default defineConfig({
         },
     },
     build: {
-        outDir: "build",
+        outDir: "dist",
     },
 });

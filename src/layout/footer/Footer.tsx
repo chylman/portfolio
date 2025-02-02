@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo";
 import IconGithub from "../../assets/image/icons/github-mini.svg";
@@ -17,8 +16,8 @@ export const Footer = () => {
                 <FooterTop>
                     <Logo/>
                     <LinkList>
-                        <LinkItem href={"#"}>+91 12345 09876</LinkItem>
-                        <LinkItem href={"#"}>info@example.com</LinkItem>
+                        <LinkItem>+91 12345 09876</LinkItem>
+                        <LinkItem>info@example.com</LinkItem>
                         <LinkItem>
                             <SocialList>
                                 {SOCIAL_ITEMS.map((item) => {
