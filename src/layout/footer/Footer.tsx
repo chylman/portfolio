@@ -5,6 +5,7 @@ import IconTwitter from "../../assets/image/icons/twitter-mini.svg";
 import IconLinkedin from "../../assets/image/icons/linkedin-mini.svg";
 import {Menu} from "../../components/menu/Menu";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {Container} from "../../components/Container";
 
 const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
@@ -12,35 +13,37 @@ const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <I
 export const Footer = () => {
     return (
         <StyledFooter>
-            <FlexWrapper wrap={"wrap"}>
-                <FooterTop>
-                    <Logo/>
-                    <LinkList>
-                        <LinkItem>+91 12345 09876</LinkItem>
-                        <LinkItem>info@example.com</LinkItem>
-                        <LinkItem>
-                            <SocialList>
-                                {SOCIAL_ITEMS.map((item) => {
-                                    return <SocialItem>
-                                        <SocialLink>
-                                            {item.icon}
-                                        </SocialLink>
-                                    </SocialItem>
-                                })}
-                            </SocialList>
-                        </LinkItem>
-                    </LinkList>
-                </FooterTop>
-                <Menu menuItems={MENU_ITEMS}/>
-                <Copyright>Designed and built by Pavan MG with Love & Coffee</Copyright>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper wrap={"wrap"}>
+                    <FooterTop>
+                        <Logo/>
+                        <LinkList>
+                            <LinkItem>+91 12345 09876</LinkItem>
+                            <LinkItem>info@example.com</LinkItem>
+                            <LinkItem>
+                                <SocialList>
+                                    {SOCIAL_ITEMS.map((item) => {
+                                        return <SocialItem>
+                                            <SocialLink>
+                                                {item.icon}
+                                            </SocialLink>
+                                        </SocialItem>
+                                    })}
+                                </SocialList>
+                            </LinkItem>
+                        </LinkList>
+                    </FooterTop>
+                    <Menu menuItems={MENU_ITEMS}/>
+                    <Copyright>Designed and built by Pavan MG with Love & Coffee</Copyright>
+                </FlexWrapper>
+            </Container>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
   background-color: #e5623b;
-  min-height: 202vh;
+  min-height: 20vh;
 `
 
 const LinkList = styled.ul`

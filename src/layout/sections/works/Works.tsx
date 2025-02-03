@@ -4,34 +4,37 @@ import {Menu} from "../../../components/menu/Menu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Work} from "./work/work";
 import placeholderImage from "../../../assets/image/content/placeholder.png"
+import {Container} from "../../../components/Container";
 
 const worksItems = ["all", "landing page", "react", "spa"]
 
 export const Works = () => {
     return (
         <StyledWorks>
-            <SectionTitle>Projects</SectionTitle>
-            <Menu menuItems={worksItems}/>
-            <FlexWrapper justify={"space-between"} wrap={"wrap"}>
-                <Work title={"Project Tile goes here"}
-                      description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                      src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
-                <Work title={"Project Tile goes here"}
-                      description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                      src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
-                <Work title={"Project Tile goes here"}
-                      description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                      src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
-                <Work title={"Project Tile goes here"}
-                      description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                      src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
-                <Work title={"Project Tile goes here"}
-                      description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                      src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
-                <Work title={"Project Tile goes here"}
-                      description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                      src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>Projects</SectionTitle>
+                <Menu menuItems={worksItems}/>
+                <FlexWrapper justify={"space-between"} wrap={"wrap"}>
+                    <Work title={"Project Tile goes here"}
+                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
+                          src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
+                    <Work title={"Project Tile goes here"}
+                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
+                          src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
+                    <Work title={"Project Tile goes here"}
+                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
+                          src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
+                    <Work title={"Project Tile goes here"}
+                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
+                          src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
+                    <Work title={"Project Tile goes here"}
+                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
+                          src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
+                    <Work title={"Project Tile goes here"}
+                          description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
+                          src={placeholderImage} stack={"Tech stack : HTML , JavaScript, SASS, React"}/>
+                </FlexWrapper>
+            </Container>
         </StyledWorks>
     );
 };

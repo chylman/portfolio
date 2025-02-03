@@ -14,26 +14,29 @@ import IconGit from '../../../assets/image/icons/git.svg';
 import IconGreensock from '../../../assets/image/icons/greensock.svg';
 import IconVscode from '../../../assets/image/icons/vscode.svg';
 import IconGithub from '../../../assets/image/icons/github.svg';
+import {Container} from "../../../components/Container";
 
 
 export const Skills = () => {
     return (
         <StyledSkills>
-            <SectionTitle>My Tech Stack</SectionTitle>
-            <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                <Skill icon={<IconHtml5/>}></Skill>
-                <Skill icon={<IconCSS/>}></Skill>
-                <Skill icon={<IconJs/>}></Skill>
-                <Skill icon={<IconReact/>}></Skill>
-                <Skill icon={<IconRedux/>}></Skill>
-                <Skill icon={<IconBootstrap/>}></Skill>
-                <Skill icon={<IconTailwind/>}></Skill>
-                <Skill icon={<IconSass/>}></Skill>
-                <Skill icon={<IconGit/>}></Skill>
-                <Skill icon={<IconGreensock/>}></Skill>
-                <Skill icon={<IconVscode/>}></Skill>
-                <Skill icon={<IconGithub/>}></Skill>
-            </FlexWrapper>
+            <Container>
+                <SectionTitle>My Tech Stack</SectionTitle>
+                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
+                    <Skill icon={<IconHtml5/>}></Skill>
+                    <Skill icon={<IconCSS/>}></Skill>
+                    <Skill icon={<IconJs/>}></Skill>
+                    <Skill icon={<IconReact/>}></Skill>
+                    <Skill icon={<IconRedux/>}></Skill>
+                    <Skill icon={<IconBootstrap/>}></Skill>
+                    <Skill icon={<IconTailwind/>}></Skill>
+                    <Skill icon={<IconSass/>}></Skill>
+                    <Skill icon={<IconGit/>}></Skill>
+                    <Skill icon={<IconGreensock/>}></Skill>
+                    <Skill icon={<IconVscode/>}></Skill>
+                    <Skill icon={<IconGithub/>}></Skill>
+                </FlexWrapper>
+            </Container>
         </StyledSkills>
     );
 };

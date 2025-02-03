@@ -1,16 +1,19 @@
 import photo from '../../../assets/image/content/503536831.jpg'
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Container} from "../../../components/Container";
 
 export const Main = () => {
     return (
         <StyledMain>
-            <FlexWrapper align={"center"} justify={"space-around"}>
-                <div>
-                    <MainTitle>Hi 👋, My name is Ilya Afanasev I build things for web</MainTitle>
-                </div>
-                <Photo src={photo}/>
-            </FlexWrapper>
+            <Container>
+                <FlexWrapper align={"center"} justify={"space-around"}>
+                    <div>
+                        <MainTitle>Hi 👋, My name is Ilya Afanasev I build things for web</MainTitle>
+                    </div>
+                    <Photo src={photo}/>
+                </FlexWrapper>
+            </Container>
         </StyledMain>
     );
 };

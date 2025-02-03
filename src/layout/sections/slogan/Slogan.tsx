@@ -1,11 +1,14 @@
 import styled from "styled-components";
 import {Button} from "../../../components/Button";
+import {Container} from "../../../components/Container";
 
 export const Slogan = () => {
     return (
         <StyledSlogan>
-            <span>For any questions please mail me:</span>
-            <Button as={"a"} href={"#"}>chylmanprosto@gmail.com</Button>
+            <Container>
+                <span>For any questions please mail me:</span>
+                <Button as={"a"} href={"#"}>chylmanprosto@gmail.com</Button>
+            </Container>
         </StyledSlogan>
     );
 };
