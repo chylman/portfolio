@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {theme} from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
   *,
@@ -17,6 +18,8 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: ${theme.colors.primaryBg};
+    color: ${theme.colors.textMain};
   }
 
   code {
