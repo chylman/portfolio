@@ -49,9 +49,12 @@ const Mask = styled.span`
   display: inline-block;
   height: 50%;
   overflow-y: hidden;
+  transition: transform ${theme.animation.transitionDefault};
 
   span {
     color: ${theme.colors.textSecond};
+
+    transition: color ${theme.animation.transitionDefault};
   }
 
   & + & {
@@ -73,6 +76,7 @@ const ListItem = styled.li`
     height: 2px;
     background-color: ${theme.colors.textSecond};
     transform: scale(0);
+    transition: transform ${theme.animation.transitionDefault};
 
     position: absolute;
     top: 50%;
