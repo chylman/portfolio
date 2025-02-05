@@ -6,6 +6,7 @@ import IconLinkedin from "../../assets/image/icons/linkedin-mini.svg";
 import {Menu} from "../../components/menu/Menu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
+import {Socials} from "../../components/socials/Socials";
 
 const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
@@ -21,15 +22,7 @@ export const Footer = () => {
                             <LinkItem>+91 12345 09876</LinkItem>
                             <LinkItem>info@example.com</LinkItem>
                             <LinkItem>
-                                <SocialList>
-                                    {SOCIAL_ITEMS.map((item) => {
-                                        return <SocialItem>
-                                            <SocialLink>
-                                                {item.icon}
-                                            </SocialLink>
-                                        </SocialItem>
-                                    })}
-                                </SocialList>
+                                <Socials items={SOCIAL_ITEMS}/>
                             </LinkItem>
                         </LinkList>
                     </FooterTop>
@@ -54,21 +47,6 @@ const LinkList = styled.ul`
   padding: 0;
 `
 const LinkItem = styled.li`
-
-`
-
-const SocialList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-`
-
-const SocialItem = styled.li`
-
-`
-const SocialLink = styled.a`
 
 `
 
