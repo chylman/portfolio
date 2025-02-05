@@ -15,6 +15,7 @@ import IconGreensock from '../../../assets/image/icons/greensock.svg';
 import IconVscode from '../../../assets/image/icons/vscode.svg';
 import IconGithub from '../../../assets/image/icons/github.svg';
 import {Container} from "../../../components/Container";
+import {SectionText} from "../../../components/SectionText";
 
 
 export const Skills = () => {
@@ -22,6 +23,7 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
+                <SectionText> Technologies I’ve been working with recently</SectionText>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                     <Skill icon={<IconHtml5/>}></Skill>
                     <Skill icon={<IconCSS/>}></Skill>
@@ -42,6 +44,5 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  background-color: #312949;
   min-height: 100vh;
 `
