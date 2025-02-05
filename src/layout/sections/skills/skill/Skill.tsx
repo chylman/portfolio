@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type SkillsPropsType = {
-    icon: any
+    icon: JSX.Element
     title?: string
     description?: string
 }

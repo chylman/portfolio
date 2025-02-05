@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from "styled-components";
 
 type SocialsPropsType = {
-    items: [{ icon: JSX.Element }]
+    items: { icon: JSX.Element }[]
 }
 
 
