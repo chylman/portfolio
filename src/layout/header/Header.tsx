@@ -8,6 +8,7 @@ import {Socials} from "../../components/socials/Socials";
 import IconGithub from "../../assets/image/icons/github-mini.svg";
 import IconTwitter from "../../assets/image/icons/twitter-mini.svg";
 import IconLinkedin from "../../assets/image/icons/linkedin-mini.svg";
+import logoImage from "../../assets/image/logo/logo 3.svg"
 
 const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
@@ -17,7 +18,7 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
-                    <Logo/>
+                    <Logo src={logoImage}/>
                     <Menu menuItems={MENU_ITEMS}/>
                     <Socials items={SOCIAL_ITEMS}/>
                 </FlexWrapper>

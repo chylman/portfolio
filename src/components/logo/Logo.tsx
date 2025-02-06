@@ -1,9 +1,7 @@
-import logo from "../../assets/image/logo/logo 3.svg"
-
-export const Logo = () => {
+export const Logo = (props) => {
     return (
         <a href="#">
-            <img src={logo} alt={""} width={"97"} height={"59"}/>
+            <img src={props.src} alt={""} width={"97"} height={"59"}/>
         </a>
     );
 };

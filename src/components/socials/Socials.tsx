@@ -35,6 +35,7 @@ const SocialsLink = styled.a`
   display: inline-block;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 
   svg {
     width: 100%;

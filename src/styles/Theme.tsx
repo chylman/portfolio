@@ -4,6 +4,7 @@ export const theme = {
         secondBg: "#363636",
         accent: "#13b0f5",
         accentSecond: "#e70faa",
+        accentDecor: "#42446E",
 
         textMain: "#d9d9d9",
         textSecond: "#a7a7a7",
