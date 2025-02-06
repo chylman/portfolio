@@ -5,13 +5,17 @@ type FlexWrapperPropsType = {
     justify?: string
     align?: string
     wrap?: string
+    gapRow?: string
+    gapColumn?: string
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   display: flex;
-  flex-direction: ${props => props.direction || "row"};
+  height: 100%;
+  flex-direction: ${props=> props.direction || "row"};
   justify-content: ${props => props.justify || "flex-start"};
   align-items: ${props => props.align || "flex-start"};
   flex-wrap: ${props => props.wrap || "nowrap"};
-  height: 100%;
+  row-gap: ${props => props.gapRow || "0"};
+  column-gap: ${props => props.gapColumn || "0"};
 `

@@ -17,7 +17,6 @@ import IconGithub from '../../../assets/image/icons/github.svg';
 import {Container} from "../../../components/Container";
 import {SectionText} from "../../../components/SectionText";
 
-
 export const Skills = () => {
     return (
         <StyledSkills>
