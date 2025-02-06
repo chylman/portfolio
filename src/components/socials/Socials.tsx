@@ -8,8 +8,8 @@ type SocialsPropsType = {
 export const Socials = (props: SocialsPropsType) => {
     return (
         <StyledSocials>
-            {props.items.map((item) => {
-                return <SocialsItem>
+            {props.items.map((item, index) => {
+                return <SocialsItem key={index}>
                     <SocialsLink>
                         {item.icon}
                     </SocialsLink>
