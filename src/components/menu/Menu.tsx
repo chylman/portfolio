@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+export const Menu = (props: { menuItems: Array<string>, justify?: string }) => {
     return (
         <StyledMenu>
             <ul>
