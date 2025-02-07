@@ -17,6 +17,13 @@ export const Skill = (props: SkillsPropsType) => {
 };
 
 const StyledSkill = styled.div`
+  width: 120px;
+  height: 120px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const SkillTitle = styled.h3`
