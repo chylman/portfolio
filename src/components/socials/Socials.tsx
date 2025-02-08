@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type SocialsPropsType = {
     items: { icon: JSX.Element }[]
@@ -36,9 +37,16 @@ const SocialsLink = styled.a`
   width: 100%;
   height: 100%;
   cursor: pointer;
+  color: ${theme.colors.iconMain};
+
+  &:hover {
+    color: ${theme.colors.iconHover};
+  }
 
   svg {
     width: 100%;
     height: 100%;
+    color: inherit;
+    transition: color ${theme.animation.transitionIconHover};
   }
 `

@@ -11,9 +11,13 @@ export const theme = {
         textSmall: "#cccccc",
 
         white: "#ffffff",
-        outline: "#a7a7a7"
+        outline: "#a7a7a7",
+
+        iconMain: "#a7a7a7",
+        iconHover: "#ffffff",
     },
     animation: {
-        transitionDefault: "0.5s ease-in-out"
+        transitionDefault: "0.5s ease-in-out",
+        transitionIconHover: "0.2s ease-in-out"
     }
 }
