@@ -2,10 +2,10 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
 
-export const Menu = (props: { menuItems: Array<string>, justify?: string }) => {
+export const Menu = (props: { menuItems: Array<string>, justify?: string, className?: string }) => {
     return (
-        <StyledMenu>
-            <ul>
+        <StyledMenu className={props.className}>
+            <List justify={props.justify || null}>
                 {props.menuItems.map((item, index) => {
                     return <ListItem key={index}>
                         <Link href="#">
@@ -19,16 +19,18 @@ export const Menu = (props: { menuItems: Array<string>, justify?: string }) => {
                         </Link>
                     </ListItem>
                 })}
-            </ul>
+            </List>
         </StyledMenu>
     );
 };
 
 const StyledMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-  }
+`
+
+const List = styled.ul<{ justify?: string | null }>`
+  display: flex;
+  gap: 30px;
+  justify-content: ${props => props.justify || "flex-start"};
 `
 
 const Link = styled.a`

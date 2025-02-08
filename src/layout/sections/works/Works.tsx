@@ -15,8 +15,8 @@ export const Works = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText>Things I’ve built so far</SectionText>
-                <Menu menuItems={worksItems}/>
-                <FlexWrapper justify={"space-between"} wrap={"wrap"} gapColumn={"50px"} gapRow={"65px"}>
+                <Menu menuItems={worksItems} justify={"center"} className={"works-menu"}/>
+                <FlexWrapper justify={"space-between"} wrap={"wrap"} gapcolumn={"50px"} gaprow={"65px"}>
                     <Work title={"Project Tile goes here"}
                           description={"This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
                           src={placeholderImage} titleStack={"Tech stack: "} stack={"HTML , JavaScript, SASS, React"}/>
@@ -42,4 +42,7 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
+  .works-menu {
+    margin: 0 0 50px 0;
+  }
 `
