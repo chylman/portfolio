@@ -38,9 +38,12 @@ const SocialsLink = styled.a`
   height: 100%;
   cursor: pointer;
   color: ${theme.colors.iconMain};
+  transition: transform ${theme.animation.transitionDefault};
+
 
   &:hover {
     color: ${theme.colors.iconHover};
+    transform: translateY(-2px);
   }
 
   svg {

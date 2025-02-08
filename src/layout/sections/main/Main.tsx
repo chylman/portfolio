@@ -1,4 +1,4 @@
-import photo from '../../../assets/image/content/50353683 1.png'
+import photo from '../../../assets/image/content/my-photo.png'
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
@@ -10,9 +10,8 @@ export const Main = () => {
         <StyledMain>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"}>
-                    <MainTitle>Hi 👋, <br/> My name is<br/> <GradientText>Ilya Afanasev</GradientText> <br/> I build
-                        things for
-                        web</MainTitle>
+                    <MainTitle>Hi 👋, <br/> My name is<br/> <GradientText>Ilja Afanasev</GradientText> <br/> I'm a
+                        Front-end Developer</MainTitle>
                     <ImageBlock>
                         <Photo src={photo}/>
                     </ImageBlock>
@@ -49,6 +48,9 @@ const MainTitle = styled.h1`
 const ImageBlock = styled.div`
 
   position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+
 
   &::before {
     content: "";
