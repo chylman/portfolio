@@ -22,7 +22,8 @@ export const Contact = () => {
 
 const StyledContacts = styled.section`
   padding: 100px 0;
-  min-height: 50vh;
+
+
 `
 const StyledForm = styled.form`
   display: flex;
@@ -32,6 +33,11 @@ const StyledForm = styled.form`
   margin: 0 auto;
   max-width: 540px;
   width: 100%;
+
+  textarea {
+    resize: none;
+    height: 155px;
+  }
 `
 const Field = styled.input`
   padding: 7px 15px;
@@ -53,5 +59,9 @@ const Field = styled.input`
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 18px;
+  }
+
+  &:focus {
+    outline: 1px solid ${theme.colors.outline};
   }
 `

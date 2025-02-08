@@ -23,12 +23,12 @@ export const Footer = () => {
                         <Logo src={logoImage}/>
                         <LinkList>
                             <LinkItem>
-                                <Link>
+                                <Link href={"tel:+9412345678"}>
                                     +91 12345 09876
                                 </Link>
                             </LinkItem>
                             <LinkItem>
-                                <Link>
+                                <Link href={"mailto: info@example.com"}>
                                     info@example.com
                                 </Link>
                             </LinkItem>
@@ -49,11 +49,11 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  min-height: 20vh;
 `
 
 const LinkList = styled.ul`
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
@@ -61,13 +61,18 @@ const LinkList = styled.ul`
   column-gap: 33px;
 `
 const LinkItem = styled.li`
-
 `
 
 const Link = styled.a`
+  display: inline-flex;
   font-weight: 400;
   font-size: 18px;
   color: ${theme.colors.textSecond};
+  transition: color ${theme.animation.transitionDefault};
+
+  &:hover {
+    color: ${theme.colors.white};
+  }
 `
 
 const Copyright = styled.small`

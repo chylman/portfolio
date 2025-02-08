@@ -10,7 +10,8 @@ export const theme = {
         textSecond: "#a7a7a7",
         textSmall: "#cccccc",
 
-        white: "#ffffff"
+        white: "#ffffff",
+        outline: "#a7a7a7"
     },
     animation: {
         transitionDefault: "0.5s ease-in-out"

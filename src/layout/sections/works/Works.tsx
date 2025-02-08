@@ -14,7 +14,7 @@ export const Works = () => {
         <StyledWorks>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
-                <SectionText>Things I’ve built so far</SectionText>
+                <SectionText className={"works-text"}>Things I’ve built so far</SectionText>
                 <Menu menuItems={worksItems} justify={"center"} className={"works-menu"}/>
                 <FlexWrapper justify={"space-between"} wrap={"wrap"} gapcolumn={"50px"} gaprow={"65px"}>
                     <Work title={"Project Tile goes here"}
@@ -46,5 +46,9 @@ const StyledWorks = styled.section`
 
   .works-menu {
     margin: 0 0 50px 0;
+  }
+
+  .works-text {
+    margin-bottom: 50px;
   }
 `
