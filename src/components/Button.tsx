@@ -4,13 +4,14 @@ import {theme} from "../styles/Theme.tsx";
 export const Button = styled.button`
   position: relative;
   display: inline-flex;
-  font-family: "Poppins", sans-serif;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px 10px;
+  padding: 6px 10px 5px;
 
+
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   color: ${theme.colors.textMain};
   cursor: pointer;
