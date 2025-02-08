@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../styles/Theme";
 
 export const SectionText = styled.p`
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   font-weight: 400;
   font-size: 32px;
   text-align: center;

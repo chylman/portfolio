@@ -42,6 +42,8 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
+  padding: 100px 0;
+
   .works-menu {
     margin: 0 0 50px 0;
   }

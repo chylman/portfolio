@@ -20,7 +20,7 @@ export const Slogan = () => {
 };
 
 const StyledSlogan = styled.section`
-  padding: 178px 0;
+  padding: 100px 0;
 `
 
 const Link = styled.a`

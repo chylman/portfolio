@@ -25,7 +25,7 @@ export const Main = () => {
 const StyledMain = styled.div`
   display: flex;
   min-height: 100vh;
-  padding-top: 120px;
+  padding: 100px 0;
   background-color: #191919;
 `
 

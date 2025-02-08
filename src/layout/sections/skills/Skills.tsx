@@ -44,4 +44,5 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
   min-height: 100vh;
+  padding: 100px 0;
 `
