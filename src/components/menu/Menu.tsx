@@ -85,6 +85,8 @@ const ListItem = styled.li`
     left: -5px;
     right: -10px;
     z-index: 1;
+
+    pointer-events: none;
   }
 
   &:hover {
