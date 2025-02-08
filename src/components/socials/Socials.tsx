@@ -47,6 +47,6 @@ const SocialsLink = styled.a`
     width: 100%;
     height: 100%;
     color: inherit;
-    transition: color ${theme.animation.transitionIconHover};
+    transition: color ${theme.animation.transitionDefault};
   }
 `

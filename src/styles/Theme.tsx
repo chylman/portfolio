@@ -18,6 +18,5 @@ export const theme = {
     },
     animation: {
         transitionDefault: "0.5s ease-in-out",
-        transitionIconHover: "0.2s ease-in-out"
     }
 }
