@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../../styles/Theme.tsx";
 import IconGithub from "../../../../assets/image/icons/github-mini-white.svg";
 import IconChain from "../../../../assets/image/icons/chain.svg";
+import {Button} from "../../../../components/Button.tsx";
 
 type WorkPropsType = {
     title: string
@@ -14,7 +15,10 @@ type WorkPropsType = {
 export const Work = (props: WorkPropsType) => {
     return (
         <StyledWork>
-            <Image src={props.src} alt=""/>
+            <ImageWrapper>
+                <Button>View project</Button>
+                <Image src={props.src} alt=""/>
+            </ImageWrapper>
             <Content>
                 <Title>{props.title}</Title>
                 <Description>{props.description}</Description>
@@ -51,12 +55,49 @@ const Image = styled.img`
   object-fit: cover;
 `
 
+const ImageWrapper = styled.div`
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    filter: blur(4px);
+    opacity: 0;
+    transition: opacity ${theme.animation.transitionDefault};
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    ${Button} {
+      opacity: 1;
+    }
+  }
+
+  ${Button} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity ${theme.animation.transitionDefault};
+  }
+
+`
+
 const Link = styled.a`
   color: ${theme.colors.white};
   text-decoration: underline;
   font-weight: 400;
   font-size: 16px;
-  
+
   svg {
     margin: 0 12px 0 0;
   }
@@ -64,7 +105,7 @@ const Link = styled.a`
 
 const Title = styled.h3`
   margin: 0 0 17px 0;
-  
+
   font-weight: 500;
   font-size: 28px;
   text-align: center;
@@ -72,13 +113,13 @@ const Title = styled.h3`
 
 const Description = styled.p`
   margin: 0 0 12px 0;
-  
+
   font-weight: 300;
   font-size: 18px;
   line-height: 144%;
   color: ${theme.colors.textSmall};
 `
-const Content = styled.div `
+const Content = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
