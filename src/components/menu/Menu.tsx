@@ -40,6 +40,7 @@ const Link = styled.a`
   font-size: 20px;
   line-height: 130%;
   text-align: center;
+  white-space: nowrap;
 
   color: transparent;
 `
@@ -55,6 +56,7 @@ const Mask = styled.span`
 
   span {
     color: ${theme.colors.textSecond};
+    white-space: nowrap;
 
     transition: color ${theme.animation.transitionDefault};
   }
