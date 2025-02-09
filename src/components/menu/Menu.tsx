@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
-
 export const Menu = (props: { menuItems: Array<string>, justify?: string, className?: string }) => {
     return (
         <StyledMenu className={props.className}>
@@ -25,6 +24,9 @@ export const Menu = (props: { menuItems: Array<string>, justify?: string, classN
 };
 
 const StyledMenu = styled.nav`
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `
 
 const List = styled.ul<{ justify?: string | null }>`

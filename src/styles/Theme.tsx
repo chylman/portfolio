@@ -18,5 +18,9 @@ export const theme = {
     },
     animation: {
         transitionDefault: "0.5s ease-in-out",
+    },
+    media: {
+        tablet: "screen and (max-width: 1023px)",
+        mobile: "screen and (max-width: 768px)"
     }
 }

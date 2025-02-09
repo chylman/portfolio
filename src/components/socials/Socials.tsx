@@ -2,13 +2,14 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
 type SocialsPropsType = {
-    items: { icon: JSX.Element }[]
+    items: { icon: JSX.Element }[],
+    className?: string,
 }
 
 
 export const Socials = (props: SocialsPropsType) => {
     return (
-        <StyledSocials>
+        <StyledSocials className={props.className}>
             {props.items.map((item, index) => {
                 return <SocialsItem key={index}>
                     <SocialsLink>

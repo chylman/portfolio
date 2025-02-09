@@ -9,6 +9,7 @@ import IconGithub from "../../assets/image/icons/github-mini.svg";
 import IconTwitter from "../../assets/image/icons/twitter-mini.svg";
 import IconLinkedin from "../../assets/image/icons/linkedin-mini.svg";
 import logoImage from "../../assets/image/logo/logo 3.svg"
+import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
@@ -20,7 +21,8 @@ export const Header = () => {
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo src={logoImage}/>
                     <Menu menuItems={MENU_ITEMS}/>
-                    <Socials items={SOCIAL_ITEMS}/>
+                    <MobileMenu menuItems={MENU_ITEMS}/>
+                    <Socials items={SOCIAL_ITEMS} className={"header-desktop-socials"}/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>
@@ -35,4 +37,15 @@ const StyledHeader = styled.header`
   right: 0;
   padding: 41px 0 21px;
   background-color: ${theme.colors.primaryBg};
+
+  @media ${theme.media.tablet} {
+    padding: 5px 0 10px;
+  }
+
+  .header-desktop-socials {
+    @media ${theme.media.tablet} {
+      display: none;
+    }
+  }
+
 `
