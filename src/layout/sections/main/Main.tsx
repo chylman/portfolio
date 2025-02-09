@@ -13,7 +13,14 @@ export const Main = () => {
                     <MainTitle>Hi 👋, <br/> My name is<br/> <GradientText>Ilja Afanasev</GradientText> <br/> I'm a
                         Front-end Developer</MainTitle>
                     <ImageBlock>
-                        <Photo src={photo}/>
+                        <Decor></Decor>
+                        <Decor></Decor>
+                        <Decor></Decor>
+                        <Decor></Decor>
+                        <Decor></Decor>
+                        <ImageWrapper>
+                            <Photo src={photo}/>
+                        </ImageWrapper>
                     </ImageBlock>
                 </FlexWrapper>
             </Container>
@@ -26,6 +33,7 @@ const StyledMain = styled.div`
   min-height: 100vh;
   padding: 100px 0;
   background-color: #191919;
+  overflow: hidden;
 `
 
 const Photo = styled.img`
@@ -46,7 +54,10 @@ const MainTitle = styled.h1`
 `
 
 const ImageBlock = styled.div`
+  position: relative;
+`
 
+const ImageWrapper = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 50%;
@@ -63,4 +74,36 @@ const ImageBlock = styled.div`
     linear-gradient(#000 0 0);
     mask-composite: exclude;
   }
+`
+
+const Decor = styled.div`
+  position: absolute;
+  left: -44px;
+  top: -35px;
+  width: 444px;
+  height: 444px;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-image: linear-gradient(to left top, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.3) 90%) 1;
+  pointer-events: none;
+
+  &:nth-of-type(1) {
+    transform: rotate(-200deg);
+  }
+
+  &:nth-of-type(2) {
+    transform: rotate(-185deg);
+  }
+
+  &:nth-of-type(3) {
+    transform: rotate(-170deg);
+  }
+
+  &:nth-of-type(4) {
+    transform: rotate(-155deg);
+  }
+
+  &:nth-of-type(5) {
+    transform: rotate(-140deg);
+  }
+
 `
