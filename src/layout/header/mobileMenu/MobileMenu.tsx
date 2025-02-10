@@ -8,7 +8,13 @@ import IconLinkedin from "../../../assets/image/icons/linkedin-mini.svg";
 
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
 
-export const MobileMenu = (props: { menuItems: Array<string>, justify?: string, className?: string }) => {
+type MobileMenuPropsType = {
+    menuItems: Array<string>
+    justify?: string | null
+    className?: string
+}
+
+export const MobileMenu = (props: MobileMenuPropsType) => {
     return (
         <StyledMobileMenu className={props.className}>
             <BurgerButton isOpen={true}>
@@ -66,7 +72,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `
 
-const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
+const MobileMenuWrapper = styled.div<{ isOpen?: boolean }>`
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -79,14 +85,14 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   background-color: ${theme.colors.secondBg};
   visibility: hidden;
 
-  ${props => props.isOpen && css<{ isOpen: boolean }>} {
+  ${props => props.isOpen && css<{ isOpen?: boolean }>} {
     visibility: visible;
   }
 `
 
-const List = styled.ul<{ flexJustify?: string }>`
+const List = styled.ul<{ justify?: string | null }>`
   display: flex;
-  justify-content: ${props => props.flexJustify || "flex-start"};
+  justify-content: ${props => props.justify || "flex-start"};
   flex-direction: column;
   align-items: center;
   gap: 30px;
