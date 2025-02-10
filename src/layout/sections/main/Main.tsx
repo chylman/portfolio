@@ -4,12 +4,13 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {GradientText} from "../../../components/GradientText";
+import {font} from "../../../styles/Common.ts";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"}>
+                <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
                     <MainTitle>Hi 👋, <br/> My name is<br/> <GradientText>Ilja Afanasev</GradientText> <br/> I'm a
                         Front-end Developer</MainTitle>
                     <ImageBlock>
@@ -34,6 +35,13 @@ const StyledMain = styled.div`
   padding: 100px 0;
   background-color: #191919;
   overflow: hidden;
+
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      column-gap: 20px;
+      justify-content: center;
+    }
+  }
 `
 
 const Photo = styled.img`
@@ -41,20 +49,32 @@ const Photo = styled.img`
   width: 349px;
   height: 349px;
   object-fit: cover;
+
+  @media ${theme.media.mobile} {
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const MainTitle = styled.h1`
+  ${font({color: theme.colors.textMain, weight: 700, Fmax: 58, Fmin: 36})}
   text-align: left;
   max-width: 636px;
-  color: ${theme.colors.textMain};
 
-  font-weight: 700;
-  font-size: 58px;
   letter-spacing: -0.02em;
+
+  @media ${theme.media.tablet} {
+    margin-bottom: 20px;
+  }
 `
 
 const ImageBlock = styled.div`
   position: relative;
+
+  @media ${theme.media.mobile} {
+    width: 100%;
+    max-width: 349px;
+  }
 `
 
 const ImageWrapper = styled.div`
@@ -62,6 +82,11 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   border-radius: 50%;
 
+  @media ${theme.media.mobile} {
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 349px;
+  }
 
   &::before {
     content: "";
@@ -104,6 +129,13 @@ const Decor = styled.div`
 
   &:nth-of-type(5) {
     transform: rotate(-140deg);
+  }
+
+  @media ${theme.media.mobile} {
+    left: -37px;
+    top: -17px;
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
   }
 
 `

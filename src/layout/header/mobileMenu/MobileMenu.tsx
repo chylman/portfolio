@@ -51,8 +51,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 
   svg {
     position: absolute;
@@ -84,12 +84,12 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   }
 `
 
-const List = styled.ul<{ justify?: string | null }>`
+const List = styled.ul<{ flexJustify?: string }>`
   display: flex;
+  justify-content: ${props => props.flexJustify || "flex-start"};
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  justify-content: ${props => props.justify || "flex-start"};
 `
 
 const Link = styled.a`
