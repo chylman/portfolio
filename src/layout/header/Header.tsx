@@ -15,14 +15,26 @@ const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
 
 export const Header: React.FC = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 1023;
+
+    React.useEffect(() => {
+        const handlerWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handlerWindowResize);
+        return () => window.removeEventListener("resize", handlerWindowResize);
+    }, [])
+
     return (
         <S.Header>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo src={logoImage}/>
-                    <Menu menuItems={MENU_ITEMS}/>
-                    <MobileMenu menuItems={MENU_ITEMS} justify={"center"}/>
-                    <Socials items={SOCIAL_ITEMS} className={"header-desktop-socials"}/>
+                    {width < breakpoint ? <MobileMenu menuItems={MENU_ITEMS} justify={"center"}/> :
+                        <>
+                            <Menu menuItems={MENU_ITEMS}/>
+                            <Socials items={SOCIAL_ITEMS}
+                                     className={"header-desktop-socials"}/>
+                        </>}
                 </FlexWrapper>
             </Container>
         </S.Header>
