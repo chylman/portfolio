@@ -3,7 +3,7 @@ import {Logo} from "../../components/logo/Logo";
 import IconGithub from "../../assets/image/icons/github-mini.svg";
 import IconTwitter from "../../assets/image/icons/twitter-mini.svg";
 import IconLinkedin from "../../assets/image/icons/linkedin-mini.svg";
-import {Menu} from "../../components/menu/Menu";
+import {Menu, StyledMenu} from "../../components/menu/Menu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import {Socials} from "../../components/socials/Socials";
@@ -49,6 +49,11 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
+  ${StyledMenu} {
+    @media ${theme.media.tablet} {
+      display: none;
+    }
+  }
 `
 
 const LinkList = styled.ul`
@@ -59,8 +64,14 @@ const LinkList = styled.ul`
   margin: 0;
   padding: 0;
   column-gap: 33px;
+
+  @media ${theme.media.tablet} {
+    justify-content: center;
+    row-gap: 15px;
+  }
 `
 const LinkItem = styled.li`
+
 `
 
 const Link = styled.a`
@@ -99,6 +110,13 @@ const FooterTop = styled.div`
     height: 1px;
     background-color: ${theme.colors.accentDecor};
   }
+
+  @media ${theme.media.tablet} {
+    column-gap: 33px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 `
 
 const FooterBottom = styled.div`
@@ -107,4 +125,8 @@ const FooterBottom = styled.div`
   align-items: center;
   width: 100%;
   min-height: 135px;
+
+  @media ${theme.media.tablet} {
+    justify-content: center;
+  }
 `
