@@ -70,6 +70,18 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: none;
     }
   }
+
+  ${props => props.isOpen && css`
+    svg {
+      &:first-child {
+        display: none;
+      }
+
+      &:last-child {
+        display: inline-flex;
+      }
+    }
+  `}
 `
 
 const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
@@ -80,7 +92,8 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   left: 0;
   bottom: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   background-color: ${theme.colors.secondBg};
   visibility: hidden;
