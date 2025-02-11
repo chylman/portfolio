@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.tsx";
-import {StyledMenu} from "../../components/menu/Menu.tsx";
+import {S as S_Menu} from "../../components/menu/Menu_Styles";
 
 const Header = styled.header`
   z-index: 9999;
@@ -11,7 +11,7 @@ const Header = styled.header`
   padding: 41px 0 21px;
   background-color: ${theme.colors.primaryBg};
 
-  ${StyledMenu} {
+  ${S_Menu.Menu} {
     @media ${theme.media.tablet} {
       display: none;
     }

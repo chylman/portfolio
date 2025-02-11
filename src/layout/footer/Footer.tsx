@@ -3,7 +3,7 @@ import {Logo} from "../../components/logo/Logo";
 import IconGithub from "../../assets/image/icons/github-mini.svg";
 import IconTwitter from "../../assets/image/icons/twitter-mini.svg";
 import IconLinkedin from "../../assets/image/icons/linkedin-mini.svg";
-import {Menu, StyledMenu} from "../../components/menu/Menu";
+import {Menu} from "../../components/menu/Menu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import {Socials} from "../../components/socials/Socials";
@@ -49,11 +49,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  ${StyledMenu} {
-    @media ${theme.media.tablet} {
-      display: none;
-    }
-  }
+
 `
 
 const LinkList = styled.ul`
