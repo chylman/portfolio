@@ -23,10 +23,10 @@ export const Menu = (props: { menuItems: Array<string>, justify?: string, classN
     );
 };
 
-const StyledMenu = styled.nav`
-  @media ${theme.media.tablet} {
-    display: none;
-  }
+export const StyledMenu = styled.nav`
+    // @media ${theme.media.tablet} {
+  //   display: none;
+  // }
 `
 
 const List = styled.ul<{ justify?: string | null }>`

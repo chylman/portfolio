@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Menu} from "../../components/menu/Menu";
+import {Menu, StyledMenu} from "../../components/menu/Menu";
 import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
@@ -38,14 +38,20 @@ const StyledHeader = styled.header`
   padding: 41px 0 21px;
   background-color: ${theme.colors.primaryBg};
 
-  @media ${theme.media.tablet} {
-    padding: 5px 0 10px;
+  ${StyledMenu} {
+    @media ${theme.media.tablet} {
+      display: none;
+    }
   }
 
   .header-desktop-socials {
     @media ${theme.media.tablet} {
       display: none;
     }
+  }
+
+  @media ${theme.media.tablet} {
+    padding: 5px 0 10px;
   }
 
 `
