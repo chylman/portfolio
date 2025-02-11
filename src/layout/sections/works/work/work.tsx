@@ -3,6 +3,8 @@ import {theme} from "../../../../styles/Theme.tsx";
 import IconGithub from "../../../../assets/image/icons/github-mini-white.svg";
 import IconChain from "../../../../assets/image/icons/chain.svg";
 import {Button} from "../../../../components/Button.tsx";
+import {font} from "../../../../styles/Common.ts";
+
 
 type WorkPropsType = {
     title: string
@@ -106,17 +108,17 @@ const Link = styled.a`
 const Title = styled.h3`
   margin: 0 0 17px 0;
 
-  font-weight: 500;
-  font-size: 28px;
+  ${font({weight: 500, Fmax: 28, Fmin: 24})}
+
   text-align: center;
+
 `
 
 const Description = styled.p`
   margin: 0 0 12px 0;
 
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 144%;
+  ${font({weight: 300, lineHeight: 1.44, Fmax: 18, Fmin: 16})}
+
   color: ${theme.colors.textSmall};
 `
 const Content = styled.div`
