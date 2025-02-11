@@ -24,7 +24,12 @@ export const Contact = () => {
 const StyledContacts = styled.section`
   padding: 100px 0;
 
-
+  @media ${theme.media.tablet} {
+    padding: 50px 0;
+  }
+  @media ${theme.media.mobile} {
+    padding: 20px 0;
+  }
 `
 const StyledForm = styled.form`
   display: flex;
