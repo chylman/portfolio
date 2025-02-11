@@ -16,6 +16,7 @@ import IconVscode from '../../../assets/image/icons/vscode.svg';
 import IconGithub from '../../../assets/image/icons/github.svg';
 import {Container} from "../../../components/Container";
 import {SectionText} from "../../../components/SectionText";
+import {theme} from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
@@ -23,7 +24,7 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText> Technologies I’ve been working with recently</SectionText>
-                <FlexWrapper wrap={"wrap"} gapcolumn={"100px"} gaprow={"80px"}>
+                <FlexWrapper wrap={"wrap"} gapcolumn={"100px"} gaprow={"80px"} justify={"center"}>
                     <Skill icon={<IconHtml5/>}></Skill>
                     <Skill icon={<IconCSS/>}></Skill>
                     <Skill icon={<IconJs/>}></Skill>
@@ -43,6 +44,19 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  min-height: 100vh;
   padding: 100px 0;
+
+  ${FlexWrapper} {
+    @media ${theme.media.mobile} {
+      column-gap: 50px;
+      row-gap: 40px;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    padding: 50px 0;
+  }
+  @media ${theme.media.mobile} {
+    padding: 20px 0;
+  }
 `

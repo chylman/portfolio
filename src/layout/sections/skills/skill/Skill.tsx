@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../../../styles/Theme";
 
 type SkillsPropsType = {
     icon: JSX.Element
@@ -23,6 +24,11 @@ const StyledSkill = styled.div`
   svg {
     width: 100%;
     height: 100%;
+  }
+
+  @media ${theme.media.mobile} {
+    width: 100px;
+    height: 100px;
   }
 `
 
