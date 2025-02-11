@@ -3,6 +3,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common.ts";
 
 export const Contact = () => {
     return (
@@ -38,6 +39,10 @@ const StyledForm = styled.form`
     resize: none;
     height: 155px;
   }
+
+  @media ${theme.media.mobile} {
+    max-width: initial;
+  }
 `
 const Field = styled.input`
   padding: 7px 15px;
@@ -46,19 +51,13 @@ const Field = styled.input`
   border-radius: 5px;
   border: 1px solid ${theme.colors.textSecond};
 
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 18px;
-  color: ${theme.colors.textSecond};
-
+  ${font({family: "\"Poppins\", sans-serif", weight: 300, Fmax: 18, Fmin: 16, color: theme.colors.textSecond})};
 
   &::placeholder {
     text-transform: capitalize;
     color: ${theme.colors.textSecond};
 
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    font-size: 18px;
+    ${font({family: "\"Poppins\", sans-serif", weight: 300, Fmax: 18, Fmin: 16, color: theme.colors.textSecond})};
   }
 
   &:focus {
