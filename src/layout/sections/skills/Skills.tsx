@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./skill/Skill";
@@ -16,11 +15,11 @@ import IconVscode from '../../../assets/image/icons/vscode.svg';
 import IconGithub from '../../../assets/image/icons/github.svg';
 import {Container} from "../../../components/Container";
 import {SectionText} from "../../../components/SectionText";
-import {theme} from "../../../styles/Theme";
+import {S} from "./Skills_Styles"
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText> Technologies I’ve been working with recently</SectionText>
@@ -39,24 +38,6 @@ export const Skills = () => {
                     <Skill icon={<IconGithub/>}></Skill>
                 </FlexWrapper>
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
-
-const StyledSkills = styled.section`
-  padding: 100px 0;
-
-  ${FlexWrapper} {
-    @media ${theme.media.mobile} {
-      column-gap: 50px;
-      row-gap: 40px;
-    }
-  }
-
-  @media ${theme.media.tablet} {
-    padding: 50px 0;
-  }
-  @media ${theme.media.mobile} {
-    padding: 20px 0;
-  }
-`
