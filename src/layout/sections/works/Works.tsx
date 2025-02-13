@@ -1,11 +1,11 @@
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Menu} from "../../../components/menu/Menu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Work} from "./work/work";
 import placeholderImage from "../../../assets/image/content/placeholder.png"
 import {Container} from "../../../components/Container";
 import {SectionText} from "../../../components/SectionText.tsx";
 import {S} from "./Works_Styles.ts";
+import {Work} from "./work/Work.tsx";
 
 const worksItems = ["All", "Landing page", "React", "Spa"]
 
