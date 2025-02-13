@@ -23,4 +23,4 @@ const Skills = styled.section`
 export const S = {
     Skills
 }
-bnnnnnnnn
+
