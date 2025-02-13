@@ -1,47 +1,9 @@
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme.tsx";
-import IconGithub from "../../../../assets/image/icons/github-mini-white.svg";
-import IconChain from "../../../../assets/image/icons/chain.svg";
 import {Button} from "../../../../components/Button.tsx";
 import {font} from "../../../../styles/Common.ts";
 
-
-type WorkPropsType = {
-    title: string
-    description: string
-    src: string
-    titleStack: string
-    stack: string
-}
-
-export const Work = (props: WorkPropsType) => {
-    return (
-        <StyledWork>
-            <ImageWrapper>
-                <Button>View project</Button>
-                <Image src={props.src} alt=""/>
-            </ImageWrapper>
-            <Content>
-                <Title>{props.title}</Title>
-                <Description>{props.description}</Description>
-                <Stack>
-                    <TitleStack>{props.titleStack}</TitleStack>
-                    {props.stack}
-                </Stack>
-                <Link href={"#"}>
-                    <IconChain/>
-                    Live Preview
-                </Link>
-                <Link href={"#"}>
-                    <IconGithub/>
-                    View Code
-                </Link>
-            </Content>
-        </StyledWork>
-    );
-};
-
-const StyledWork = styled.div`
+const Work = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 373px;
@@ -138,3 +100,15 @@ const TitleStack = styled.span`
   font-weight: 400;
   font-size: 16px;
 `
+
+export const S = {
+    Work,
+    Image,
+    ImageWrapper,
+    Link,
+    Title,
+    Description,
+    Content,
+    Stack,
+    TitleStack,
+}
