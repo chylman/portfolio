@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import {theme} from "../../../../styles/Theme";
+import {S} from "./Skill_Styles.ts"
 
 type SkillsPropsType = {
     icon: JSX.Element
@@ -9,31 +8,10 @@ type SkillsPropsType = {
 
 export const Skill = (props: SkillsPropsType) => {
     return (
-        <StyledSkill>
+        <S.Skill>
             {props.icon}
-            {props.title && <SkillTitle>{props.title}</SkillTitle>}
-            {props.description && <SkillText>{props.description}</SkillText>}
-        </StyledSkill>
+            {props.title && <S.SkillTitle>{props.title}</S.SkillTitle>}
+            {props.description && <S.SkillText>{props.description}</S.SkillText>}
+        </S.Skill>
     );
 };
-
-const StyledSkill = styled.div`
-  width: 120px;
-  height: 120px;
-
-  svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  @media ${theme.media.mobile} {
-    width: 100px;
-    height: 100px;
-  }
-`
-
-const SkillTitle = styled.h3`
-`
-
-const SkillText = styled.p`
-`
