@@ -41,10 +41,11 @@ const SocialsLink = styled.a`
   color: ${theme.colors.iconMain};
   transition: transform ${theme.animation.transitionDefault};
 
-
-  &:hover {
-    color: ${theme.colors.iconHover};
-    transform: translateY(-2px);
+  @media (hover: hover) {
+    &:hover {
+      color: ${theme.colors.iconHover};
+      transform: translateY(-2px);
+    }
   }
 
   svg {

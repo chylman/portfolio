@@ -65,24 +65,27 @@ const ListItem = styled.li`
     pointer-events: none;
   }
 
-  &:hover {
-    &::before {
-      transform: scale(1);
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        transform: scale(1);
+      }
+
+      ${Mask} {
+        transform: skewX(12deg) translateX(5px);
+      }
+
+      ${Mask} span {
+        background-image: linear-gradient(to right, ${theme.colors.accent}, ${theme.colors.accentSecond});
+        color: transparent;
+        background-clip: text;
+      }
+
+      & + ${Mask} {
+        transform: skewX(12deg) translateX(-5px);
+      }
     }
 
-    ${Mask} {
-      transform: skewX(12deg) translateX(5px);
-    }
-
-    ${Mask} span {
-      background-image: linear-gradient(to right, ${theme.colors.accent}, ${theme.colors.accentSecond});
-      color: transparent;
-      background-clip: text;
-    }
-
-    & + ${Mask} {
-      transform: skewX(12deg) translateX(-5px);
-    }
   }
 `
 

@@ -33,9 +33,12 @@ export const Button = styled.button`
     opacity: 0;
   }
 
-  &:hover {
-    &::before {
-      opacity: 1;
+  @media (hover: hover) {
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
     }
   }
+
 `
