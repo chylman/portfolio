@@ -15,7 +15,7 @@ type MobileMenuPropsType = {
     className?: string
 }
 
-export const MobileMenu = (props: MobileMenuPropsType) => {
+export const MobileMenu: React.FC<MobileMenuPropsType> = (props: MobileMenuPropsType) => {
     return (
         <S.MobileMenu className={props.className}>
             <S.BurgerButton isOpen={false}>

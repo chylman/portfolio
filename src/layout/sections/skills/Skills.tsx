@@ -16,8 +16,9 @@ import IconGithub from '../../../assets/image/icons/github.svg';
 import {Container} from "../../../components/Container";
 import {SectionText} from "../../../components/SectionText";
 import {S} from "./Skills_Styles"
+import React from "react";
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
     return (
         <S.Skills>
             <Container>

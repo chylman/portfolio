@@ -13,7 +13,7 @@ import {S} from "./Footer_Styles.ts"
 const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
     return (
         <S.Footer>
             <Container>

@@ -2,8 +2,9 @@ import {Container} from "../../../components/Container";
 import {GradientText} from "../../../components/GradientText.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {S} from "./Slogan_Styled.ts";
+import React from "react";
 
-export const Slogan = () => {
+export const Slogan: React.FC = () => {
     return (
         <S.Slogan>
             <Container>

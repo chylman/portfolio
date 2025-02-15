@@ -1,4 +1,5 @@
 import {S} from "./Skill_Styles.ts"
+import React from "react";
 
 type SkillsPropsType = {
     icon: JSX.Element
@@ -6,7 +7,7 @@ type SkillsPropsType = {
     description?: string
 }
 
-export const Skill = (props: SkillsPropsType) => {
+export const Skill: React.FC<SkillsPropsType> = (props: SkillsPropsType) => {
     return (
         <S.Skill>
             {props.icon}

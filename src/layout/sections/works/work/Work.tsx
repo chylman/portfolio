@@ -2,6 +2,7 @@ import IconGithub from "../../../../assets/image/icons/github-mini-white.svg";
 import IconChain from "../../../../assets/image/icons/chain.svg";
 import {Button} from "../../../../components/Button.ts";
 import {S} from "./Work_Styles.ts"
+import React from "react";
 
 type WorkPropsType = {
     title: string
@@ -11,7 +12,7 @@ type WorkPropsType = {
     stack: string
 }
 
-export const Work = (props: WorkPropsType) => {
+export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
     return (
         <S.Work>
             <S.ImageWrapper>

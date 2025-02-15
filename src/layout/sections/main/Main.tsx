@@ -3,8 +3,9 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
 import {GradientText} from "../../../components/GradientText";
 import {S} from "./Main_Styles"
+import React from "react";
 
-export const Main = () => {
+export const Main: React.FC = () => {
     return (
         <S.Main>
             <Container>
