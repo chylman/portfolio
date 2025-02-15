@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {theme} from "../../../styles/Theme.tsx";
 import {font} from "../../../styles/Common.ts";
-import {GradientText} from "../../../components/GradientText.tsx";
+import {GradientText} from "../../../components/GradientText.ts";
 
 const Slogan = styled.section`
   padding: 100px 0;

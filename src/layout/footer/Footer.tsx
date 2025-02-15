@@ -7,7 +7,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import {Socials} from "../../components/socials/Socials";
 import logoImage from "../../assets/image/logo/logo-gray.svg"
-import {GradientText} from "../../components/GradientText.tsx";
+import {GradientText} from "../../components/GradientText.ts";
 import {S} from "./Footer_Styles.ts"
 
 const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]

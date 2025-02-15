@@ -1,6 +1,6 @@
 import {Container} from "../../../components/Container";
-import {GradientText} from "../../../components/GradientText.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {GradientText} from "../../../components/GradientText.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {S} from "./Slogan_Styled.ts";
 
 export const Slogan = () => {

@@ -1,6 +1,6 @@
 import IconGithub from "../../../../assets/image/icons/github-mini-white.svg";
 import IconChain from "../../../../assets/image/icons/chain.svg";
-import {Button} from "../../../../components/Button.tsx";
+import {Button} from "../../../../components/Button.ts";
 import {S} from "./Work_Styles.ts"
 
 type WorkPropsType = {

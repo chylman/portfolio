@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme.tsx";
-import {Button} from "../../../../components/Button.tsx";
+import {Button} from "../../../../components/Button.ts";
 import {font} from "../../../../styles/Common.ts";
 
 const Work = styled.div`

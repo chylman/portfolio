@@ -3,7 +3,7 @@ import {Menu} from "../../../components/menu/Menu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import placeholderImage from "../../../assets/image/content/placeholder.png"
 import {Container} from "../../../components/Container";
-import {SectionText} from "../../../components/SectionText.tsx";
+import {SectionText} from "../../../components/SectionText.ts";
 import {S} from "./Works_Styles.ts";
 import {Work} from "./work/Work.tsx";
 
