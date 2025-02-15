@@ -53,7 +53,7 @@ const worksData = [
     },
 ]
 
-export const Works = () => {
+export const Works: React.FC = () => {
     return (
         <S.Works>
             <Container>
