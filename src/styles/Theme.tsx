@@ -12,9 +12,15 @@ export const theme = {
 
         white: "#ffffff",
         outline: "#a7a7a7",
+        border: "#EBEAED",
 
         iconMain: "#a7a7a7",
         iconHover: "#ffffff",
+
+        plateBg: "#d7ffe0",
+        plateText: "#018c0f",
+
+
     },
     animation: {
         transitionDefault: "0.5s ease-in-out",

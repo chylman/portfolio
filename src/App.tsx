@@ -6,6 +6,7 @@ import {Contact} from "./layout/sections/contact/Contact";
 import {Slogan} from "./layout/sections/slogan/Slogan";
 import {Footer} from "./layout/footer/Footer";
 import {Works} from "./layout/sections/works/Works.tsx";
+import {About} from "./layout/sections/about/About";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <div className="App">
             <Header/>
             <Main/>
+            <About/>
             <Skills/>
             <Works/>
             <Contact/>

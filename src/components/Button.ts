@@ -6,7 +6,7 @@ export const Button = styled.button`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 6px 10px 5px;
+  padding: 6px 20px 5px;
 
 
   font-family: "Poppins", sans-serif;
@@ -26,7 +26,7 @@ export const Button = styled.button`
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 5px;
+    border-radius: 100px;
     transition: opacity ${theme.animation.transitionDefault};
 
     background: linear-gradient(to right, ${theme.colors.accent}, ${theme.colors.accentSecond});

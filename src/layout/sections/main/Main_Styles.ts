@@ -8,7 +8,7 @@ const Main = styled.div`
   min-height: 100vh;
   padding: 100px 0;
   background-color: #191919;
-  overflow: hidden;
+  overflow-x: hidden;
 
   ${FlexWrapper} {
     @media ${theme.media.tablet} {
@@ -115,10 +115,10 @@ const Decor = styled.div`
 `
 
 export const S = {
-  Main,
-  Photo,
-  MainTitle,
-  ImageBlock,
-  ImageWrapper,
-  Decor
+    Main,
+    Photo,
+    MainTitle,
+    ImageBlock,
+    ImageWrapper,
+    Decor
 }
