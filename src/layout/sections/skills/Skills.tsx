@@ -18,6 +18,45 @@ import {SectionText} from "../../../components/SectionText";
 import {S} from "./Skills_Styles"
 import React from "react";
 
+const skillsData = [
+    {
+        icon: <IconHtml5/>,
+    },
+    {
+        icon: <IconCSS/>,
+    },
+    {
+        icon: <IconJs/>,
+    },
+    {
+        icon: <IconReact/>,
+    },
+    {
+        icon: <IconRedux/>,
+    },
+    {
+        icon: <IconBootstrap/>,
+    },
+    {
+        icon: <IconTailwind/>,
+    },
+    {
+        icon: <IconSass/>,
+    },
+    {
+        icon: <IconGit/>,
+    },
+    {
+        icon: <IconGreensock/>,
+    },
+    {
+        icon: <IconVscode/>,
+    },
+    {
+        icon: <IconGithub/>,
+    },
+]
+
 export const Skills: React.FC = () => {
     return (
         <S.Skills>
@@ -25,18 +64,9 @@ export const Skills: React.FC = () => {
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText> Technologies I’ve been working with recently</SectionText>
                 <FlexWrapper wrap={"wrap"} gapcolumn={"100px"} gaprow={"80px"} justify={"center"}>
-                    <Skill icon={<IconHtml5/>}></Skill>
-                    <Skill icon={<IconCSS/>}></Skill>
-                    <Skill icon={<IconJs/>}></Skill>
-                    <Skill icon={<IconReact/>}></Skill>
-                    <Skill icon={<IconRedux/>}></Skill>
-                    <Skill icon={<IconBootstrap/>}></Skill>
-                    <Skill icon={<IconTailwind/>}></Skill>
-                    <Skill icon={<IconSass/>}></Skill>
-                    <Skill icon={<IconGit/>}></Skill>
-                    <Skill icon={<IconGreensock/>}></Skill>
-                    <Skill icon={<IconVscode/>}></Skill>
-                    <Skill icon={<IconGithub/>}></Skill>
+                    {
+                        skillsData.map((s, index) => <Skill icon={s.icon} key={index}/>)
+                    }
                 </FlexWrapper>
             </Container>
         </S.Skills>
