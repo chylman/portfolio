@@ -1,3 +1,4 @@
+import {useState} from "react";
 import {theme} from "../../../styles/Theme";
 import {TbMenu3, TbX} from "react-icons/tb";
 import {Socials} from "../../../components/socials/Socials";
@@ -16,13 +17,20 @@ type MobileMenuPropsType = {
 }
 
 export const MobileMenu: React.FC<MobileMenuPropsType> = (props: MobileMenuPropsType) => {
+    const [menuIsOpen, setmenuIsOpen] = useState(false);
+    const onBurgerBtnClick = () => {
+        setmenuIsOpen(!menuIsOpen)
+    }
+
     return (
         <S.MobileMenu className={props.className}>
-            <S.BurgerButton isOpen={false}>
+            <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
                 <TbMenu3 size="36" color={theme.colors.iconMain}/>
                 <TbX size="36" color={theme.colors.iconMain}/>
             </S.BurgerButton>
-            <S.MobileMenuWrapper isOpen={false}>
+            <S.MobileMenuWrapper isOpen={menuIsOpen} onClick={() => {
+                setmenuIsOpen(false)
+            }}>
                 <MenuList menuItems={props.menuItems} justify={props.justify || null}/>
                 <Socials items={SOCIAL_ITEMS}/>
             </S.MobileMenuWrapper>
