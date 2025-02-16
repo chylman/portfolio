@@ -13,6 +13,7 @@ const Main = styled.div`
     padding: 100px 0;
 
     @media ${theme.media.tablet} {
+      flex-direction: column;
       column-gap: 20px;
       justify-content: center;
     }
@@ -39,6 +40,7 @@ const MainTitle = styled.h1`
   letter-spacing: -0.02em;
 
   @media ${theme.media.tablet} {
+    align-self: flex-start;
     margin-bottom: 20px;
   }
 `
