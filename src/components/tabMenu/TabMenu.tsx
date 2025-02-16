@@ -20,7 +20,7 @@ export const TabMenu: React.FC<TabMenuPropsType> = (props: TabMenuPropsType) => 
             <S.TabsList justify={props.justify || null}>
                 {props.tabsItems.map((item, index) => {
                     return <S.ListItem key={index}>
-                        <S.Link active={props.currentFilterStatus === item.status} as={"button"} onClick={() => {
+                        <S.Link isActive={props.currentFilterStatus === item.status} as="button" onClick={() => {
                             props.changeFilterStatus(item.status)
                         }}>
                             {item.title}

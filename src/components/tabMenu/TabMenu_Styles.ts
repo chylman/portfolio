@@ -7,7 +7,7 @@ const TabsList = styled.ul<{ justify?: string | null }>`
   justify-content: ${props => props.justify || "flex-start"};
 `
 
-const Link = styled.a<{ $active?: boolean }>`
+const Link = styled.a<{ isActive?: boolean }>`
   font-family: "DM Sans", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -19,7 +19,7 @@ const Link = styled.a<{ $active?: boolean }>`
 
   color: transparent;
 
-  ${props => props.active && css`
+  ${props => props.isActive && css`
     & ${Mask} span {
       background-image: linear-gradient(to right, ${theme.colors.accent}, ${theme.colors.accentSecond});
       color: transparent;
