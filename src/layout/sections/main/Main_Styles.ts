@@ -36,12 +36,18 @@ const MainTitle = styled.h1`
   ${font({color: theme.colors.textMain, weight: 700, Fmax: 58, Fmin: 36})}
   text-align: left;
   max-width: 636px;
+  min-height: 370px;
 
   letter-spacing: -0.02em;
 
   @media ${theme.media.tablet} {
+    min-height: initial;
     align-self: flex-start;
     margin-bottom: 20px;
+  }
+
+  @media ${theme.media.mobile} {
+    min-height: 230px;
   }
 `
 
