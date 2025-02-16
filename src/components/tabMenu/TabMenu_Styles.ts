@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../styles/Theme";
 
 const TabsList = styled.ul<{ justify?: string | null }>`
@@ -7,7 +7,7 @@ const TabsList = styled.ul<{ justify?: string | null }>`
   justify-content: ${props => props.justify || "flex-start"};
 `
 
-const Link = styled.a`
+const Link = styled.a<{ $active?: boolean }>`
   font-family: "DM Sans", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -18,6 +18,14 @@ const Link = styled.a`
   cursor: pointer;
 
   color: transparent;
+
+  ${props => props.active && css`
+    & ${Mask} span {
+      background-image: linear-gradient(to right, ${theme.colors.accent}, ${theme.colors.accentSecond});
+      color: transparent;
+      background-clip: text;
+    }
+  `}
 `
 
 const Mask = styled.span`

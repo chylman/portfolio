@@ -23,7 +23,7 @@ export const theme = {
 
     },
     animation: {
-        transitionDefault: "0.5s ease-in-out",
+        transitionDefault: "0.4s ease-in-out",
     },
     media: {
         tablet: "screen and (max-width: 1023px)",
