@@ -8,7 +8,7 @@ const Header = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  padding: 41px 0 21px;
+  padding: 20px 0 20px;
   background-color: ${theme.colors.primaryBg};
 
   ${S_Menu.Menu} {

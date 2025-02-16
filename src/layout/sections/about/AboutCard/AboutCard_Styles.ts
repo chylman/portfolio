@@ -12,6 +12,7 @@ const AboutCard = styled.div`
 
   @media ${theme.media.tablet} {
     grid-template-columns: minmax(220px, auto) minmax(100px, auto);
+    gap: 8px 12px;
   }
 
   @media ${theme.media.mobile} {
@@ -45,7 +46,7 @@ const FormatWork = styled.div`
 
 const Company = styled.div`
   display: flex;
-  align-items: center;
+  //align-items: center;
   column-gap: 8px;
 
   ${font({color: theme.colors.textSecond, weight: 500, Fmax: 12, Fmin: 10})}
@@ -54,14 +55,14 @@ const Company = styled.div`
 
 const Location = styled.div`
   display: flex;
-  align-items: center;
+  //align-items: center;
   column-gap: 8px;
 
   ${font({color: theme.colors.textSecond, weight: 500, Fmax: 12, Fmin: 10})}
   letter-spacing: 0.08em;
 
   @media ${theme.media.tablet} {
-    grid-row: 4 / 5;
+    grid-row: 3 / 4;
   }
 `
 
@@ -69,7 +70,7 @@ const TimePeriod = styled.div`
   justify-self: end;
 
   display: flex;
-  align-items: center;
+  //align-items: center;
   column-gap: 8px;
 
   ${font({color: theme.colors.textSecond, weight: 500, Fmax: 12, Fmin: 10})};

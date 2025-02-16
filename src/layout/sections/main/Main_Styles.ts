@@ -6,11 +6,12 @@ import {font} from "../../../styles/Common";
 const Main = styled.div`
   display: flex;
   min-height: 100vh;
-  padding: 100px 0;
   background-color: #191919;
-  overflow-x: hidden;
+  overflow-x: clip;
 
   ${FlexWrapper} {
+    padding: 100px 0;
+
     @media ${theme.media.tablet} {
       column-gap: 20px;
       justify-content: center;
