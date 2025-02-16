@@ -104,7 +104,7 @@ export const Works: React.FC = () => {
 
 
     return (
-        <S.Works>
+        <S.Works id={"projects"}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionText className={"works-text"}>Things I’ve built so far</SectionText>

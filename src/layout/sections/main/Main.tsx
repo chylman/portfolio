@@ -1,5 +1,6 @@
 import React from "react";
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 import photo from '../../../assets/image/content/my-photo.jpg'
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Container} from "../../../components/Container";
@@ -8,7 +9,7 @@ import {S} from "./Main_Styles"
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={"home"}>
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
                     <S.MainTitle>
@@ -27,9 +28,11 @@ export const Main: React.FC = () => {
                         <S.Decor></S.Decor>
                         <S.Decor></S.Decor>
                         <S.Decor></S.Decor>
-                        <S.ImageWrapper>
-                            <S.Photo src={photo}/>
-                        </S.ImageWrapper>
+                        <Tilt tiltEnable={false} scale={1.1} transitionSpeed={2500}>
+                            <S.ImageWrapper>
+                                <S.Photo src={photo}/>
+                            </S.ImageWrapper>
+                        </Tilt>
                     </S.ImageBlock>
                 </FlexWrapper>
             </Container>

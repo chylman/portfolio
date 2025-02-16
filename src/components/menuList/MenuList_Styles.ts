@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
+import {Link} from "react-scroll";
 
 const MenuList = styled.ul<{ justify?: string | null }>`
   display: flex;
@@ -7,17 +8,6 @@ const MenuList = styled.ul<{ justify?: string | null }>`
   justify-content: ${props => props.justify || "flex-start"};
 `
 
-const Link = styled.a`
-  font-family: "DM Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 130%;
-  text-align: center;
-  white-space: nowrap;
-
-  color: transparent;
-`
 
 const Mask = styled.span`
   position: absolute;
@@ -45,7 +35,18 @@ const Mask = styled.span`
   }
 `
 
-const ListItem = styled.li`
+const MenuListLink = styled(Link)`
+  font-family: "DM Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  white-space: nowrap;
+
+  color: transparent;
+  cursor: pointer;
+
   position: relative;
 
   &::before {
@@ -66,7 +67,7 @@ const ListItem = styled.li`
   }
 
   @media (hover: hover) {
-    &:hover {
+    &:hover, &.isActive {
       &::before {
         transform: scale(1);
       }
@@ -85,13 +86,16 @@ const ListItem = styled.li`
         transform: skewX(12deg) translateX(-5px);
       }
     }
-
   }
+`
+
+const ListItem = styled.li`
+
 `
 
 export const S = {
     MenuList,
-    Link,
+    MenuListLink,
     Mask,
     ListItem
 }

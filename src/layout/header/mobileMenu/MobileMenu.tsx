@@ -5,13 +5,13 @@ import {Socials} from "../../../components/socials/Socials";
 import IconGithub from "../../../assets/image/icons/github-mini.svg";
 import IconTwitter from "../../../assets/image/icons/twitter-mini.svg";
 import IconLinkedin from "../../../assets/image/icons/linkedin-mini.svg";
-import {MenuList} from "../../../components/menuList/MenuList";
+import {MenuItemsPropsType, MenuList} from "../../../components/menuList/MenuList";
 import {S} from "./MobileMenu_Styles";
 
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
 
 type MobileMenuPropsType = {
-    menuItems: Array<string>
+    menuItems: MenuItemsPropsType
     justify?: string | null
     className?: string
 }

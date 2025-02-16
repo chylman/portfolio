@@ -11,7 +11,30 @@ import logoImage from "../../assets/image/logo/logo 3.svg"
 import {MobileMenu} from "./mobileMenu/MobileMenu";
 import {S} from './Header_Styles.ts';
 
-const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
+// const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
+const MENU_ITEMS = [
+    {
+        title: "Home",
+        href: "home",
+    },
+    {
+        title: "About",
+        href: "about",
+    },
+    {
+        title: "Tech Stack",
+        href: "techStack",
+    },
+    {
+        title: "Projects",
+        href: "projects",
+    },
+    {
+        title: "Contacts",
+        href: "contacts",
+    },
+]
+
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
 
 export const Header: React.FC = () => {

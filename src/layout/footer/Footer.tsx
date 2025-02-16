@@ -10,7 +10,28 @@ import logoImage from "../../assets/image/logo/logo-gray.svg"
 import {GradientText} from "../../components/GradientText.ts";
 import {S} from "./Footer_Styles.ts"
 
-const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
+const MENU_ITEMS = [
+    {
+        title: "Home",
+        href: "home",
+    },
+    {
+        title: "About",
+        href: "about",
+    },
+    {
+        title: "Tech Stack",
+        href: "techStack",
+    },
+    {
+        title: "Projects",
+        href: "projects",
+    },
+    {
+        title: "Contacts",
+        href: "contacts",
+    },
+]
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
 
 export const Footer: React.FC = () => {

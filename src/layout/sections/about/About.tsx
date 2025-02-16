@@ -26,7 +26,7 @@ const educationData = [
 ]
 export const About: React.FC = () => {
     return (
-        <S.About>
+        <S.About id={"about"}>
             <Container>
                 <SectionTitle>About Me</SectionTitle>
                 <SectionText>The Generator App is an online tool that helps you to export ready-made templates ready to

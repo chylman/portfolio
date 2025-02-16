@@ -1,8 +1,13 @@
 import React from 'react';
 import {S} from "./MenuList_Styles"
 
+export type MenuItemsPropsType = Array<{
+    title: string,
+    href: string
+}>
+
 type MenuListPropsType = {
-    menuItems: Array<string>
+    menuItems: MenuItemsPropsType
     justify?: string | null
 }
 
@@ -11,15 +16,15 @@ export const MenuList: React.FC<MenuListPropsType> = (props: MenuListPropsType) 
         <S.MenuList justify={props.justify || null}>
             {props.menuItems.map((item, index) => {
                 return <S.ListItem key={index}>
-                    <S.Link href="src/components/menuList/MenuList#">
-                        {item}
+                    <S.MenuListLink to={item.href} smooth={true} spy={true}>
+                        {item.title}
                         <S.Mask>
-                            <span>{item}</span>
+                            <span>{item.title}</span>
                         </S.Mask>
                         <S.Mask>
-                            <span>{item}</span>
+                            <span>{item.title}</span>
                         </S.Mask>
-                    </S.Link>
+                    </S.MenuListLink>
                 </S.ListItem>
             })}
         </S.MenuList>
