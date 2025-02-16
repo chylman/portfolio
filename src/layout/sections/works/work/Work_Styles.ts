@@ -2,15 +2,30 @@ import styled from "styled-components";
 import {theme} from "../../../../styles/Theme.tsx";
 import {Button} from "../../../../components/Button.ts";
 import {font} from "../../../../styles/Common.ts";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
 
 const Work = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 373px;
-  width: 100%;
+  flex-basis: 373px;
+  flex-grow: 1;
   background-color: ${theme.colors.secondBg};
   border-radius: 20px;
   color: ${theme.colors.textSmall};
+  overflow: hidden;
+
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      justify-content: space-between;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    max-width: initial;
+    width: initial;
+
+    //max-width: calc(50% - 50px)
+  }
 `
 
 const Image = styled.img`
@@ -94,6 +109,7 @@ const Stack = styled.p`
   padding: 0 0 21px 0;
   font-weight: 300;
   font-size: 14px;
+  width: 100%;
 `
 
 const TitleStack = styled.span`

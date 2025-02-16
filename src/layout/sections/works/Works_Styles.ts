@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper";
 
 const Works = styled.section`
   padding: 100px 0;
@@ -23,6 +24,16 @@ const Works = styled.section`
     }
     @media ${theme.media.mobile} {
       margin-bottom: 15px;
+    }
+  }
+
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      gap: 40px 30px;
+    }
+
+    @media ${theme.media.mobile} {
+      gap: 20px 30px;
     }
   }
 
