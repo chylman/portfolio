@@ -1,5 +1,7 @@
 import React from "react";
 import Typewriter from 'typewriter-effect';
+import {motion} from "motion/react"
+
 import Tilt from 'react-parallax-tilt';
 import photo from '../../../assets/image/content/my-photo.jpg'
 import {FlexWrapper} from "../../../components/FlexWrapper";
@@ -23,11 +25,19 @@ export const Main: React.FC = () => {
                         />
                     </S.MainTitle>
                     <S.ImageBlock>
-                        <S.Decor></S.Decor>
-                        <S.Decor></S.Decor>
-                        <S.Decor></S.Decor>
-                        <S.Decor></S.Decor>
-                        <S.Decor></S.Decor>
+                        <motion.div
+                            initial={{scale: 0}}
+                            animate={{
+                                scale: 1,
+                                transition: {duration: 2}
+                            }}>
+                            <S.Decor></S.Decor>
+                            <S.Decor></S.Decor>
+                            <S.Decor></S.Decor>
+                            <S.Decor></S.Decor>
+                            <S.Decor></S.Decor>
+                        </motion.div>
+
                         <Tilt tiltEnable={false} scale={1.1} transitionSpeed={2500}>
                             <S.ImageWrapper>
                                 <S.Photo src={photo}/>

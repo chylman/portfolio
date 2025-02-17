@@ -92,7 +92,8 @@ const Decor = styled.div`
   width: 444px;
   height: 444px;
   border: 1px solid rgba(255, 255, 255, 0);
-  border-image: linear-gradient(to left top, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.3) 90%) 1;
+  opacity: 0.2;
+  border-image: linear-gradient(to left top, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.5) 90%) 1;
   pointer-events: none;
 
   &:nth-of-type(1) {

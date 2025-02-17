@@ -1,3 +1,4 @@
+import {motion, AnimatePresence} from "motion/react"
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import placeholderImage from "../../../assets/image/content/placeholder.png"
@@ -33,52 +34,58 @@ const tabsItems: Array<{
 
 const worksData = [
     {
-        title: "Project Tile goes here",
+        title: "landing",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         src: placeholderImage,
         titleStack: "Tech stack: ",
         stack: "HTML , JavaScript, SASS, React",
         type: "landing",
+        id: 1,
     },
     {
-        title: "Project Tile goes here",
+        title: "react",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         src: placeholderImage,
         titleStack: "Tech stack: ",
         stack: "HTML , JavaScript, SASS, React",
         type: "react",
+        id: 2,
     },
     {
-        title: "Project Tile goes here",
+        title: "landing",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         src: placeholderImage,
         titleStack: "Tech stack: ",
         stack: "HTML , JavaScript, SASS, React",
         type: "landing",
+        id: 3,
     },
     {
-        title: "Project Tile goes here",
+        title: "spa",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         src: placeholderImage,
         titleStack: "Tech stack: ",
         stack: "HTML , JavaScript, SASS, React",
         type: "spa",
+        id: 4,
     },
     {
-        title: "Project Tile goes here",
+        title: "react",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         src: placeholderImage,
         titleStack: "Tech stack: ",
         stack: "HTML , JavaScript, SASS, React",
         type: "react",
+        id: 5,
     },
     {
-        title: "Project Tile goes here",
+        title: "spa",
         description: "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
         src: placeholderImage,
         titleStack: "Tech stack: ",
         stack: "HTML , JavaScript, SASS, React",
         type: "spa",
+        id: 6,
     },
 ]
 
@@ -111,13 +118,21 @@ export const Works: React.FC = () => {
                 <TabMenu tabsItems={tabsItems} justify={"center"} changeFilterStatus={changeFilterStatus}
                          currentFilterStatus={currentFilterStatus}/>
                 <FlexWrapper justify={"space-around"} wrap={"wrap"} gapcolumn={"50px"} gaprow={"65px"}>
-                    {
-                        filtredWorks.map((w, index) => {
-                            return <Work title={w.title}
-                                         description={w.description}
-                                         src={w.src} titleStack={w.titleStack} stack={w.stack} key={index}/>
-                        })
-                    }
+                    <AnimatePresence>
+                        {
+                            filtredWorks.map((w) => {
+                                return (
+                                    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
+                                                key={w.id} layout style={{flexBasis: "373px", flexGrow: 1}}>
+                                        <Work title={w.title}
+                                              description={w.description}
+                                              src={w.src} titleStack={w.titleStack}
+                                              stack={w.stack} key={w.id}/>
+                                    </motion.div>
+                                )
+                            })
+                        }
+                    </AnimatePresence>
                 </FlexWrapper>
             </Container>
         </S.Works>

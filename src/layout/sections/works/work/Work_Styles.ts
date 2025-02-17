@@ -7,8 +7,8 @@ import {FlexWrapper} from "../../../../components/FlexWrapper";
 const Work = styled.div`
   display: flex;
   flex-direction: column;
-  flex-basis: 373px;
-  flex-grow: 1;
+  //flex-basis: 373px;
+  //flex-grow: 1;
   background-color: ${theme.colors.secondBg};
   border-radius: 20px;
   color: ${theme.colors.textSmall};
