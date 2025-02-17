@@ -3,7 +3,7 @@ import {S} from './GoTopButton_Styled'
 import {TiArrowUpOutline} from "react-icons/ti";
 import {animateScroll as scroll} from "react-scroll";
 
-export const GoTopButton = () => {
+export const GoTopButton: React.FC = () => {
     const [showButton, setShowButton] = useState(false)
 
     useEffect(() => {
