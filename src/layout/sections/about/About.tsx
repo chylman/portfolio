@@ -1,4 +1,5 @@
 import React from 'react';
+import {Slide} from "react-awesome-reveal";
 import {S} from './About_Styles';
 import {Container} from '../../../components/Container';
 import {SectionTitle} from '../../../components/SectionTitle';
@@ -37,10 +38,12 @@ export const About: React.FC = () => {
                     {
                         experienceData.map((C, index) => {
                             return (
-                                <S.AboutItem key={index}>
-                                    <AboutCard position={C.position} company={C.company} formatWork={C.formatWork}
-                                               location={C.location} timePeriod={C.timePeriod}/>
-                                </S.AboutItem>
+                                <Slide direction="left" triggerOnce>
+                                    <S.AboutItem key={index}>
+                                        <AboutCard position={C.position} company={C.company} formatWork={C.formatWork}
+                                                   location={C.location} timePeriod={C.timePeriod}/>
+                                    </S.AboutItem>
+                                </Slide>
                             )
                         })
                     }
@@ -50,10 +53,12 @@ export const About: React.FC = () => {
                     {
                         educationData.map((C, index) => {
                             return (
-                                <S.AboutItem key={index}>
-                                    <AboutCard position={C.position} company={C.company} formatWork={C.formatWork}
-                                               location={C.location} timePeriod={C.timePeriod}/>
-                                </S.AboutItem>
+                                <Slide direction="left" triggerOnce>
+                                    <S.AboutItem key={index}>
+                                        <AboutCard position={C.position} company={C.company} formatWork={C.formatWork}
+                                                   location={C.location} timePeriod={C.timePeriod}/>
+                                    </S.AboutItem>
+                                </Slide>
                             )
                         })
                     }

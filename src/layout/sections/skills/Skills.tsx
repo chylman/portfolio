@@ -1,3 +1,5 @@
+import React from "react";
+import {Bounce} from "react-awesome-reveal";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./skill/Skill";
@@ -16,7 +18,6 @@ import IconGithub from '../../../assets/image/icons/github.svg';
 import {Container} from "../../../components/Container";
 import {SectionText} from "../../../components/SectionText";
 import {S} from "./Skills_Styles"
-import React from "react";
 
 const skillsData = [
     {
@@ -64,9 +65,11 @@ export const Skills: React.FC = () => {
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionText> Technologies I’ve been working with recently</SectionText>
                 <FlexWrapper wrap={"wrap"} gapcolumn={"100px"} gaprow={"80px"} justify={"center"}>
-                    {
-                        skillsData.map((s, index) => <Skill icon={s.icon} key={index}/>)
-                    }
+                    <Bounce cascade={true} damping={0.1} triggerOnce>
+                        {
+                            skillsData.map((s, index) => <Skill icon={s.icon} key={index}/>)
+                        }
+                    </Bounce>
                 </FlexWrapper>
             </Container>
         </S.Skills>
