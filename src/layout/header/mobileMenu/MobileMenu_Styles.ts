@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {S as S_MenuList} from "../../../components/menuList/MenuList_Styles";
+import {S as S_Socials} from "../../../components/socials/Socials_Styles";
 
 const MobileMenu = styled.nav`
   display: none;
@@ -8,6 +9,13 @@ const MobileMenu = styled.nav`
   ${S_MenuList.MenuList} {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    transition: gap ${theme.animation.transitionDefault};
+  }
+
+  ${S_Socials.Socials} {
+    gap: 0;
+    transition: gap ${theme.animation.transitionDefault};
   }
 
   @media ${theme.media.tablet} {
@@ -60,10 +68,19 @@ const MobileMenuWrapper = styled.div<{ isOpen: boolean }>`
   justify-content: space-evenly;
   align-items: center;
   background-color: ${theme.colors.secondBg};
-  visibility: hidden;
+  transform: translateX(100%);
+  transition: transform ${theme.animation.transitionDefault};
 
   ${props => props.isOpen && css`
-    visibility: visible;
+    transform: translateX(0);
+
+    ${S_MenuList.MenuList} {
+      gap: 30px;
+    }
+
+    ${S_Socials.Socials} {
+      gap: 20px;
+    }
   `}
 `
 

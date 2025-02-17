@@ -1,5 +1,4 @@
-import styled from "styled-components";
-import {theme} from "../../styles/Theme";
+import {S} from './Socials_Styles'
 
 type SocialsPropsType = {
     items: { icon: JSX.Element }[],
@@ -9,49 +8,15 @@ type SocialsPropsType = {
 
 export const Socials = (props: SocialsPropsType) => {
     return (
-        <StyledSocials className={props.className}>
+        <S.Socials className={props.className}>
             {props.items.map((item, index) => {
-                return <SocialsItem key={index}>
-                    <SocialsLink>
+                return <S.SocialsItem key={index}>
+                    <S.SocialsLink>
                         {item.icon}
-                    </SocialsLink>
-                </SocialsItem>
+                    </S.SocialsLink>
+                </S.SocialsItem>
             })}
-        </StyledSocials>
+        </S.Socials>
     );
 };
 
-const StyledSocials = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 0 20px;
-`
-const SocialsItem = styled.li`
-  width: 30px;
-  height: 30px;
-`
-const SocialsLink = styled.a`
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  color: ${theme.colors.iconMain};
-  transition: transform ${theme.animation.transitionDefault};
-
-  @media (hover: hover) {
-    &:hover {
-      color: ${theme.colors.iconHover};
-      transform: translateY(-2px);
-    }
-  }
-
-  svg {
-    width: 100%;
-    height: 100%;
-    color: inherit;
-    transition: color ${theme.animation.transitionDefault};
-  }
-`

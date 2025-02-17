@@ -86,9 +86,6 @@ const Title = styled.h3`
   margin: 0 0 17px 0;
 
   ${font({weight: 500, Fmax: 28, Fmin: 24})}
-
-  text-align: center;
-
 `
 
 const Description = styled.p`
