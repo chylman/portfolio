@@ -8,6 +8,7 @@ import {Footer} from "./layout/footer/Footer";
 import {Works} from "./layout/sections/works/Works.tsx";
 import {About} from "./layout/sections/about/About";
 import {Particle} from "./components/particle/Particle";
+import {GoTopButton} from "./components/goTopButton/GoTopButton";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Contact/>
             <Slogan/>
             <Footer/>
+            <GoTopButton/>
         </div>
     );
 }
