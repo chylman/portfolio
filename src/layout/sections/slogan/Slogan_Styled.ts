@@ -33,7 +33,6 @@ const Link = styled.a`
       word-wrap: break-word;
     }
   }
-
 `
 
 const Caption = styled.span`

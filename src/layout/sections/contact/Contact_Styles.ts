@@ -3,7 +3,9 @@ import {theme} from "../../../styles/Theme";
 import {font} from "../../../styles/Common";
 
 const Contacts = styled.section`
+  position: relative;
   padding: 100px 0;
+  background-color: ${theme.colors.primaryBg};
 
   @media ${theme.media.tablet} {
     padding: 50px 0;

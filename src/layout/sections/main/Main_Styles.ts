@@ -85,6 +85,7 @@ const ImageWrapper = styled.div`
 `
 
 const Decor = styled.div`
+  z-index: 0;
   position: absolute;
   left: -44px;
   top: -35px;

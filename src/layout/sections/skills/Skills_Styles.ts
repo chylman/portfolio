@@ -3,7 +3,9 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {theme} from "../../../styles/Theme";
 
 const Skills = styled.section`
+  position: relative;
   padding: 100px 0;
+  background-color: ${theme.colors.primaryBg};
 
   ${FlexWrapper} {
     @media ${theme.media.mobile} {

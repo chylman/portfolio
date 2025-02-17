@@ -3,7 +3,9 @@ import {theme} from "../../../styles/Theme.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 
 const Works = styled.section`
+  position: relative;
   padding: 100px 0;
+  background-color: ${theme.colors.primaryBg};
 
   .works-menu {
     margin: 0 0 50px 0;
