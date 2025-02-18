@@ -9,6 +9,7 @@ const GoTopButton = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${theme.colors.primaryBg};
+  border-radius: 50%;
 
   width: 40px;
   height: 40px;
