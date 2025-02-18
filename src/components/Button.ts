@@ -8,13 +8,14 @@ export const Button = styled.button`
   align-items: center;
   padding: 6px 20px 5px;
 
-
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   text-transform: uppercase;
   color: ${theme.colors.textMain};
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-image: linear-gradient(to right, ${theme.colors.accent}, ${theme.colors.accentSecond}) 1;
 
 
   &::before {
@@ -26,7 +27,6 @@ export const Button = styled.button`
     position: absolute;
     left: 0;
     top: 0;
-    border-radius: 100px;
     transition: opacity ${theme.animation.transitionDefault};
 
     background: linear-gradient(to right, ${theme.colors.accent}, ${theme.colors.accentSecond});

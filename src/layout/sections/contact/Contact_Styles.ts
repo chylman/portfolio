@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {font} from "../../../styles/Common";
+import {Button} from "../../../components/Button";
 
 const Contacts = styled.section`
+  z-index: 0;
   position: relative;
   padding: 100px 0;
   background-color: ${theme.colors.primaryBg};
+
+  ${Button} {
+    margin: 10px 0 0 0;
+  }
 
   @media ${theme.media.tablet} {
     padding: 50px 0;
@@ -20,7 +26,7 @@ const Form = styled.form`
   align-items: center;
   gap: 10px;
   margin: 0 auto;
-  max-width: 540px;
+  max-width: 750px;
   width: 100%;
 
   textarea {
