@@ -1,18 +1,39 @@
 import styled from "styled-components";
 import {animateScroll as scroll} from "react-scroll";
+import React from "react";
+// import {useRef} from 'react';
+// import gsap from 'gsap';
+// import {useGSAP} from '@gsap/react';
 
 type LogoPropsType = {
-    src: string
+    Icon?: JSX.Element
 }
 
 export const Logo = (props: LogoPropsType) => {
+    //
+    // const container = useRef();
+    //
+    // useGSAP(() => {
+    //     gsap.to(container.current, {
+    //         duration: 2,
+    //         x: 200,
+    //         rotation: 360,
+    //     });
+    //
+    // })
+
     return (
         <StyledLogo as="button" onClick={scroll.scrollToTop}>
-            <img src={props.src} alt={""} width={"97"} height={"59"}/>
+            {props.Icon}
         </StyledLogo>
     );
 };
 
 const StyledLogo = styled.a`
   cursor: pointer;
+
+  svg {
+    width: 200px;
+    height: 48px;
+  }
 `

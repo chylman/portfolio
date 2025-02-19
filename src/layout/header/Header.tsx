@@ -7,7 +7,7 @@ import {Socials} from "../../components/socials/Socials";
 import IconGithub from "../../assets/image/icons/github-mini.svg";
 import IconTwitter from "../../assets/image/icons/twitter-mini.svg";
 import IconLinkedin from "../../assets/image/icons/linkedin-mini.svg";
-import logoImage from "../../assets/image/logo/logo 3.svg"
+import LogoImage from "../../assets/image/logo/logo_3.svg?react"
 import {MobileMenu} from "./mobileMenu/MobileMenu";
 import {S} from './Header_Styles.ts';
 
@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
         <S.Header>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
-                    <Logo src={logoImage}/>
+                    <Logo Icon={<LogoImage/>}/>
                     {width < breakpoint ? <MobileMenu menuItems={MENU_ITEMS} justify={"center"}/> :
                         <>
                             <Menu menuItems={MENU_ITEMS}/>

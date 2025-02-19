@@ -6,7 +6,7 @@ import {Menu} from "../../components/menu/Menu";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {Container} from "../../components/Container";
 import {Socials} from "../../components/socials/Socials";
-import logoImage from "../../assets/image/logo/logo-gray.svg"
+import LogoImage from "../../assets/image/logo/logo-gray.svg?react"
 import {GradientText} from "../../components/GradientText.ts";
 import {S} from "./Footer_Styles.ts"
 
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             <Container>
                 <FlexWrapper wrap={"wrap"}>
                     <S.FooterTop>
-                        <Logo src={logoImage}/>
+                        <Logo Icon={<LogoImage/>}/>
                         <S.LinkList>
                             <S.LinkItem>
                                 <S.Link href={"tel:+9412345678"}>
