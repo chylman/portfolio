@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {animateScroll as scroll} from "react-scroll";
 import React from "react";
+import {theme} from "../../styles/Theme";
 // import {useRef} from 'react';
 // import gsap from 'gsap';
 // import {useGSAP} from '@gsap/react';
@@ -35,5 +36,10 @@ const StyledLogo = styled.a`
   svg {
     width: 200px;
     height: 48px;
+
+    @media ${theme.media.tablet} {
+      width: 150px;
+      height: 30px;
+    }
   }
 `
