@@ -16,7 +16,7 @@ export const MenuList: React.FC<MenuListPropsType> = (props: MenuListPropsType) 
         <S.MenuList justify={props.justify || null}>
             {props.menuItems.map((item, index) => {
                 return <S.ListItem key={index}>
-                    <S.MenuListLink to={item.href} smooth={true} spy={true}>
+                    <S.MenuListLink to={item.href} smooth={true} spy={true} activeClass={"isActive"}>
                         {item.title}
                         <S.Mask>
                             <span>{item.title}</span>
