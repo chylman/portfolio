@@ -2,16 +2,32 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {font} from "../../../styles/Common";
 import {Button} from "../../../components/Button";
+import {GradientText} from "../../../components/GradientText.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 
 const Contacts = styled.section`
-  z-index: 0;
-  position: relative;
   padding: 100px 0;
   background-color: ${theme.colors.primaryBg};
 
   ${Button} {
+    position: relative;
+    z-index: 1;
     margin: 10px 0 0 0;
   }
+
+  ${FlexWrapper} {
+    margin: 100px 0;
+
+    @media ${theme.media.tablet} {
+      margin: 50px 0;
+    }
+
+    @media ${theme.media.mobile} {
+      display: block;
+      margin: 20px 0;
+    }
+  }
+
 
   @media ${theme.media.tablet} {
     padding: 50px 0;
@@ -21,6 +37,8 @@ const Contacts = styled.section`
   }
 `
 const Form = styled.form`
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,8 +77,31 @@ const Field = styled.input`
   }
 `
 
+const Link = styled.a`
+  font-weight: 700;
+  font-size: 58px;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  ${font({weight: 700, Fmax: 58, Fmin: 28, color: theme.colors.textSecond})};
+
+  ${GradientText} {
+    @media ${theme.media.mobile} {
+      word-wrap: break-word;
+    }
+  }
+`
+
+const Caption = styled.span`
+  display: block;
+  ${font({weight: 700, Fmax: 58, Fmin: 28, color: theme.colors.textSecond})};
+  letter-spacing: -0.02em;
+  color: ${theme.colors.textSmall};
+`
+
 export const S = {
     Contacts,
     Form,
-    Field
+    Field,
+    Link,
+    Caption
 }

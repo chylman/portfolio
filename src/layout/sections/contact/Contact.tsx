@@ -4,6 +4,8 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {S} from "./Contact_Styles";
+import {GradientText} from "../../../components/GradientText.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 
 export const Contact: React.FC = () => {
     const form = useRef<ElementRef<'form'> | null>(null);
@@ -39,8 +41,13 @@ export const Contact: React.FC = () => {
                     <S.Field required placeholder={"message"} as="textarea" name={"message"}></S.Field>
                     <Button type={"submit"}>Send message</Button>
                 </S.Form>
+                <FlexWrapper direction={"column"} align={"center"} justify={"center"}>
+                    <S.Caption>For any questions please mail me:</S.Caption>
+                    <S.Link href={"mailto:chylmanprosto@gmail.com"}>
+                        <GradientText>chylmanprosto@gmail.com</GradientText>
+                    </S.Link>
+                </FlexWrapper>
             </Container>
         </S.Contacts>
     );
 };
-
