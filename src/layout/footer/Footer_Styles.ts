@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.tsx";
+import {StyledLogo} from "../../components/logo/Logo.tsx";
 
 const Footer = styled.footer`
-
+  ${StyledLogo} {
+    @media ${theme.media.tablet} {
+      margin-bottom: 20px;
+    }
+  }
 `
 
 const LinkList = styled.ul`
@@ -61,6 +66,7 @@ const FooterTop = styled.div`
   }
 
   @media ${theme.media.tablet} {
+    flex-direction: column;
     column-gap: 33px;
     justify-content: center;
     flex-wrap: wrap;

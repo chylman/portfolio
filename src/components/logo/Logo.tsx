@@ -30,7 +30,7 @@ export const Logo: React.FC = (props: LogoPropsType) => {
     );
 };
 
-const StyledLogo = styled.a`
+export const StyledLogo = styled.a`
   cursor: pointer;
 
   svg {
