@@ -17,9 +17,9 @@ type MobileMenuPropsType = {
 }
 
 export const MobileMenu: React.FC<MobileMenuPropsType> = (props: MobileMenuPropsType) => {
-    const [menuIsOpen, setmenuIsOpen] = useState(false);
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
     const onBurgerBtnClick = () => {
-        setmenuIsOpen(!menuIsOpen)
+        setMenuIsOpen(!menuIsOpen)
     }
 
     return (
@@ -29,9 +29,10 @@ export const MobileMenu: React.FC<MobileMenuPropsType> = (props: MobileMenuProps
                 <TbX size="36" color={theme.colors.iconMain}/>
             </S.BurgerButton>
             <S.MobileMenuWrapper isOpen={menuIsOpen} onClick={() => {
-                setmenuIsOpen(false)
+                setMenuIsOpen(false)
             }}>
-                <MenuList menuItems={props.menuItems} justify={props.justify || null}/>
+                <MenuList menuItems={props.menuItems} justify={props.justify || null} setMenuIsOpen={setMenuIsOpen}
+                          menuIsOpen={menuIsOpen}/>
                 <Socials items={SOCIAL_ITEMS}/>
             </S.MobileMenuWrapper>
         </S.MobileMenu>
