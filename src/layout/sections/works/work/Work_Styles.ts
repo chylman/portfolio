@@ -72,13 +72,22 @@ const ImageWrapper = styled.div`
 `
 
 const Link = styled.a`
+  display: flex;
+  align-items: center;
   color: ${theme.colors.white};
   text-decoration: underline;
   font-weight: 400;
   font-size: 16px;
+  transition: color ${theme.animation.transitionDefault};
 
   svg {
     margin: 0 12px 0 0;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: ${theme.colors.iconMain};
+    }
   }
 `
 
