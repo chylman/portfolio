@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {theme} from "../../../styles/Theme";
 import {TbMenu3, TbX} from "react-icons/tb";
 import {Socials} from "../../../components/socials/Socials";
@@ -32,7 +32,7 @@ export const MobileMenu: React.FC<MobileMenuPropsType> = (props: MobileMenuProps
                 setMenuIsOpen(false)
             }}>
                 <MenuList menuItems={props.menuItems} justify={props.justify || null} setMenuIsOpen={setMenuIsOpen}
-                          menuIsOpen={menuIsOpen}/>
+                />
                 <Socials items={SOCIAL_ITEMS}/>
             </S.MobileMenuWrapper>
         </S.MobileMenu>
