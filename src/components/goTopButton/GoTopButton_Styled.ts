@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
 const GoTopButton = styled.button`
+  z-index: 99999;
   position: fixed;
   right: 30px;
   bottom: 30px;
