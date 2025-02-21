@@ -10,7 +10,7 @@ type LogoPropsType = {
     Icon?: JSX.Element
 }
 
-export const Logo = (props: LogoPropsType) => {
+export const Logo: React.FC = (props: LogoPropsType) => {
     //
     // const container = useRef();
     //
@@ -34,8 +34,8 @@ const StyledLogo = styled.a`
   cursor: pointer;
 
   svg {
-    width: 200px;
-    height: 48px;
+    width: 180px;
+    height: 40px;
 
     @media ${theme.media.tablet} {
       width: 150px;
