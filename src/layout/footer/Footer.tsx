@@ -43,13 +43,13 @@ export const Footer: React.FC = () => {
                         <Logo Icon={<LogoImage/>}/>
                         <S.LinkList>
                             <S.LinkItem>
-                                <S.Link href={"tel:+9412345678"}>
-                                    +91 12345 09876
+                                <S.Link href={"tel:+79880885988"}>
+                                    +7 988 088 59 88
                                 </S.Link>
                             </S.LinkItem>
                             <S.LinkItem>
-                                <S.Link href={"mailto: info@example.com"}>
-                                    info@example.com
+                                <S.Link href={"mailto:chylmanprosto@gmail.com"}>
+                                    chylmanprosto@gmail.com
                                 </S.Link>
                             </S.LinkItem>
                             <S.LinkItem>
@@ -59,8 +59,8 @@ export const Footer: React.FC = () => {
                     </S.FooterTop>
                     <S.FooterBottom>
                         <Menu menuItems={MENU_ITEMS}/>
-                        <S.Copyright>Designed and built by <GradientText>Pavan
-                            MG</GradientText> with <GradientText>Love</GradientText> & <GradientText>Coffee</GradientText></S.Copyright>
+                        <S.Copyright>Built by <GradientText>Ilja
+                            Afanasev</GradientText> with <GradientText>Love</GradientText> & <GradientText>Coffee</GradientText></S.Copyright>
                     </S.FooterBottom>
                 </FlexWrapper>
             </Container>
