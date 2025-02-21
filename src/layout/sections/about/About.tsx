@@ -38,8 +38,8 @@ export const About: React.FC = () => {
                     {
                         experienceData.map((C, index) => {
                             return (
-                                <Slide direction="left" triggerOnce>
-                                    <S.AboutItem key={index}>
+                                <Slide direction="left" triggerOnce key={index}>
+                                    <S.AboutItem>
                                         <AboutCard position={C.position} company={C.company} formatWork={C.formatWork}
                                                    location={C.location} timePeriod={C.timePeriod}/>
                                     </S.AboutItem>
@@ -53,8 +53,8 @@ export const About: React.FC = () => {
                     {
                         educationData.map((C, index) => {
                             return (
-                                <Slide direction="left" triggerOnce>
-                                    <S.AboutItem key={index}>
+                                <Slide direction="left" triggerOnce key={index}>
+                                    <S.AboutItem>
                                         <AboutCard position={C.position} company={C.company} formatWork={C.formatWork}
                                                    location={C.location} timePeriod={C.timePeriod}/>
                                     </S.AboutItem>

@@ -32,7 +32,7 @@ const Photo = styled.img`
   }
 `
 
-const MainTitle = styled.h1`
+const MainTitle = styled.div`
   ${font({color: theme.colors.textMain, weight: 700, Fmax: 58, Fmin: 36})}
   text-align: left;
   max-width: 636px;
@@ -49,6 +49,11 @@ const MainTitle = styled.h1`
   @media ${theme.media.mobile} {
     min-height: 230px;
   }
+`
+
+const Title = styled.h1`
+  font-size: inherit;
+  letter-spacing: inherit;
 `
 
 const ImageBlock = styled.div`
@@ -129,6 +134,7 @@ export const S = {
     Main,
     Photo,
     MainTitle,
+    Title,
     ImageBlock,
     ImageWrapper,
     Decor

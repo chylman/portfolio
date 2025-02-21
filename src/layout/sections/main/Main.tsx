@@ -16,13 +16,15 @@ export const Main: React.FC = () => {
                 <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
                     <S.MainTitle>
                         Hi 👋, <br/> My name is<br/> <GradientText>Ilja Afanasev</GradientText>
-                        <Typewriter
-                            options={{
-                                strings: [`I'm a Front-end Developer`],
-                                autoStart: true,
-                                loop: true,
-                            }}
-                        />
+                        <S.Title>
+                            <Typewriter
+                                options={{
+                                    strings: [`I'm a Front-end Developer`],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </S.Title>
                     </S.MainTitle>
                     <S.ImageBlock>
                         <motion.div
