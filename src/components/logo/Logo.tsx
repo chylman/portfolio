@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {animateScroll as scroll} from "react-scroll";
 import React from "react";
-import {theme} from "../../styles/Theme";
 // import {useRef} from 'react';
 // import gsap from 'gsap';
 // import {useGSAP} from '@gsap/react';
@@ -31,15 +30,15 @@ export const Logo: React.FC = (props: LogoPropsType) => {
 };
 
 export const StyledLogo = styled.a`
-  cursor: pointer;
+    cursor: pointer;
 
-  svg {
-    width: 180px;
-    height: 40px;
+    svg {
+        width: 180px;
+        height: 40px;
 
-    @media ${theme.media.tablet} {
-      width: 150px;
-      height: 30px;
+        @media ${({theme}) => theme.media.tablet} {
+            width: 150px;
+            height: 30px;
+        }
     }
-  }
 `

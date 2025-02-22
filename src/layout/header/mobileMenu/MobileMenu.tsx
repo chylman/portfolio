@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {theme} from "../../../styles/Theme";
 import {TbMenu3, TbX} from "react-icons/tb";
 import {Socials} from "../../../components/socials/Socials";
 import IconGithub from "../../../assets/image/icons/github-mini.svg";
@@ -25,8 +24,8 @@ export const MobileMenu: React.FC<MobileMenuPropsType> = (props: MobileMenuProps
     return (
         <S.MobileMenu className={props.className}>
             <S.BurgerButton isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
-                <TbMenu3 size="36" color={theme.colors.iconMain}/>
-                <TbX size="36" color={theme.colors.iconMain}/>
+                <TbMenu3 size="36" color="#a7a7a7"/>
+                <TbX size="36" color="#a7a7a7"/>
             </S.BurgerButton>
             <S.MobileMenuWrapper isOpen={menuIsOpen} onClick={() => {
                 setMenuIsOpen(false)

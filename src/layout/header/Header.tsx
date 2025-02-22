@@ -10,6 +10,7 @@ import IconLinkedin from "../../assets/image/icons/linkedin-mini.svg";
 import LogoImage from "../../assets/image/logo/logo_3.svg?react"
 import {MobileMenu} from "./mobileMenu/MobileMenu";
 import {S} from './Header_Styles.ts';
+import {ThemeSwitchButton} from "../../components/themeSwitchButton/ThemeSwitchButton.tsx";
 
 // const MENU_ITEMS = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
 const MENU_ITEMS = [
@@ -37,7 +38,11 @@ const MENU_ITEMS = [
 
 const SOCIAL_ITEMS = [{icon: <IconGithub/>,}, {icon: <IconTwitter/>,}, {icon: <IconLinkedin/>,},]
 
-export const Header: React.FC = () => {
+type HeaderPropsType = {
+    setSelectedTheme: React.Dispatch<React.SetStateAction<any>>;
+}
+
+export const Header: React.FC<HeaderPropsType> = (props: HeaderPropsType) => {
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 1023;
 
@@ -57,6 +62,7 @@ export const Header: React.FC = () => {
                             <Menu menuItems={MENU_ITEMS}/>
                             <Socials items={SOCIAL_ITEMS}
                                      className={"header-desktop-socials"}/>
+                            <ThemeSwitchButton setSelectedTheme={props.setSelectedTheme}></ThemeSwitchButton>
                         </>}
                 </FlexWrapper>
             </Container>
