@@ -9,7 +9,7 @@ const Work = styled.div`
     //flex-basis: 373px;
     //flex-grow: 1;
     background-color: ${({theme}) => theme.colors.secondBg};
-    box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: ${({theme}) => theme.colors.workCardShadow};
     border-radius: 20px;
     color: ${({theme}) => theme.colors.textSmall};
     overflow: hidden;

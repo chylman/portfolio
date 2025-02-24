@@ -21,6 +21,8 @@ export const dark = {
         plateBg: "#d7ffe0",
         plateText: "#018c0f",
 
+        workCardShadow: "2px 2px 100px rgba(0, 0, 0, 0)",
+
 
     },
     animation: {
@@ -55,7 +57,7 @@ export const light = {
         plateBg: "#d7ffe0",
         plateText: "#018c0f",
 
-
+        workCardShadow: "2px 2px 100px rgba(0, 0, 0, 0.2)",
     },
     animation: {
         transitionDefault: "0.4s ease-in-out",
