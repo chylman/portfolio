@@ -2,7 +2,7 @@ export const dark = {
     name: 'dark-theme',
     colors: {
         primaryBg: "#191919",
-        secondBg: "#363636",
+        secondBg: "#202021",
         accent: "#13b0f5",
         accentSecond: "#e70faa",
         accentDecor: "#42446E",
