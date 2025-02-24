@@ -5,7 +5,7 @@ import {font} from "../../../styles/Common";
 const Main = styled.div`
     display: flex;
     min-height: 100vh;
-    background-color: #191919;
+    background-color: ${({theme}) => theme.colors.primaryBg};
     overflow-x: clip;
 
     ${FlexWrapper} {
@@ -36,7 +36,7 @@ const MainTitle = styled.div`
     text-align: left;
     max-width: 636px;
     min-height: 370px;
-    color: theme.colors.textMain;
+    color: ${({theme}) => theme.colors.textMain};
     letter-spacing: -0.02em;
 
     @media ${({theme}) => theme.media.tablet} {

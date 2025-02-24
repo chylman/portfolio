@@ -36,21 +36,21 @@ export const light = {
     name: 'light-theme',
     colors: {
         primaryBg: "#ffffff",
-        secondBg: "#363636",
+        secondBg: "#ffffff",
         accent: "#13b0f5",
         accentSecond: "#e70faa",
         accentDecor: "#42446E",
 
-        textMain: "#d9d9d9",
-        textSecond: "#a7a7a7",
-        textSmall: "#cccccc",
+        textMain: "#42446E",
+        textSecond: "#666666",
+        textSmall: "#42446E",
 
         white: "#ffffff",
         outline: "#a7a7a7",
         border: "#EBEAED",
 
-        iconMain: "#a7a7a7",
-        iconHover: "#ffffff",
+        iconMain: "#666666",
+        iconHover: "#7a7983",
 
         plateBg: "#d7ffe0",
         plateText: "#018c0f",
