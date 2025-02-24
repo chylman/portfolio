@@ -6,7 +6,7 @@ import React from "react";
 // import {useGSAP} from '@gsap/react';
 
 type LogoPropsType = {
-    Icon?: JSX.Element
+    Icon?: React.ReactNode
 }
 
 export const Logo: React.FC = (props: LogoPropsType) => {
@@ -33,6 +33,7 @@ export const StyledLogo = styled.a`
     cursor: pointer;
 
     svg {
+        color: inherit;
         width: 180px;
         height: 40px;
 

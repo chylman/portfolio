@@ -1,10 +1,36 @@
 import styled from "styled-components";
 import {StyledLogo} from "../../components/logo/Logo.tsx";
+import {S as S_MenuList} from "../../components/menuList/MenuList_Styles.ts";
+import {S as S_Socials} from "../../components/socials/Socials_Styles.ts";
 
 const Footer = styled.footer`
     ${StyledLogo} {
+        color: ${({theme}) => theme.colors.footerLogo};
+
         @media ${({theme}) => theme.media.tablet} {
             margin-bottom: 20px;
+        }
+    }
+
+    ${S_MenuList.MenuListLink} {
+        &::before {
+            background-color: ${({theme}) => theme.colors.footerMenu};
+        }
+    }
+
+    ${S_MenuList.Mask} {
+        span {
+            color: ${({theme}) => theme.colors.footerMenu};
+        }
+    }
+
+    ${S_Socials.SocialsLink} {
+        color: ${({theme}) => theme.colors.footerIcon};
+
+        @media (hover: hover) {
+            &:hover {
+                color: ${({theme}) => theme.colors.footerIconHover};
+            }
         }
     }
 `
@@ -31,11 +57,11 @@ const Link = styled.a`
     display: inline-flex;
     font-weight: 400;
     font-size: 18px;
-    color: ${({theme}) => theme.colors.textSecond};
+    color: ${({theme}) => theme.colors.footerLink};
     transition: color ${({theme}) => theme.animation.transitionDefault};
 
     &:hover {
-        color: ${({theme}) => theme.colors.white};
+        color: ${({theme}) => theme.colors.footerLinkHover};
     }
 `
 

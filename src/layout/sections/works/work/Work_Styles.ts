@@ -74,13 +74,14 @@ const ImageWrapper = styled.div`
 const Link = styled.a`
     display: flex;
     align-items: center;
-    color: ${({theme}) => theme.colors.white};
+    color: ${({theme}) => theme.colors.workCardLink};
     text-decoration: underline;
     font-weight: 400;
     font-size: 16px;
     transition: color ${({theme}) => theme.animation.transitionDefault};
 
     svg {
+        color: inherit;
         margin: 0 12px 0 0;
     }
 
@@ -93,6 +94,7 @@ const Link = styled.a`
 
 const Title = styled.h3`
     margin: 0 0 17px 0;
+    color: ${({theme}) => theme.colors.workCardTitle};
 
     ${font({weight: 500, Fmax: 28, Fmin: 24})}
 `
@@ -102,7 +104,7 @@ const Description = styled.p`
 
     ${font({weight: 300, lineHeight: 1.44, Fmax: 18, Fmin: 16})}
 
-    color: ${({theme}) => theme.colors.textSmall};
+    color: ${({theme}) => theme.colors.workCardText};
 `
 const Content = styled.div`
     display: flex;
@@ -116,6 +118,7 @@ const Stack = styled.p`
     font-weight: 300;
     font-size: 14px;
     width: 100%;
+    color: ${({theme}) => theme.colors.workCardSmallText};
 `
 
 const TitleStack = styled.span`

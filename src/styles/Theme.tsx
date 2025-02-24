@@ -18,12 +18,25 @@ export const dark = {
         iconMain: "#a7a7a7",
         iconHover: "#ffffff",
 
+        headerMenu: "#a7a7a7",
+        footerMenu: "#a7a7a7",
+
+        footerLogo: "#a7a7a7",
+        footerLink: "#a7a7a7",
+        footerLinkHover: "#ffffff",
+        footerIcon: "#a7a7a7",
+        footerIconHover: "#ffffff",
+
         plateBg: "#d7ffe0",
         plateText: "#018c0f",
 
         workCardShadow: "2px 2px 100px rgba(0, 0, 0, 0)",
+        workCardTitle: "#cccccc",
+        workCardText: "#cccccc",
+        workCardSmallText: "#cccccc",
+        workCardLink: "#ffffff",
 
-
+        particles: "#ffffff",
     },
     animation: {
         transitionDefault: "0.4s ease-in-out",
@@ -54,10 +67,24 @@ export const light = {
         iconMain: "#666666",
         iconHover: "#7a7983",
 
+        headerMenu: "#a7a7a7",
+        footerMenu: "#42446E",
+
+        footerLogo: "#42446E",
+        footerLink: "#42446E",
+        footerLinkHover: "#666666",
+        footerIcon: "#42446E",
+        footerIconHover: "#666666",
+
         plateBg: "#d7ffe0",
         plateText: "#018c0f",
 
+
         workCardShadow: "2px 2px 100px rgba(0, 0, 0, 0.2)",
+        workCardTitle: "#000",
+        workCardText: "#666",
+        workCardSmallText: "#42446e",
+        workCardLink: "#000",
     },
     animation: {
         transitionDefault: "0.4s ease-in-out",

@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        transition: ${({theme}) => theme.animation.transitionDefault};
         background-color: ${({theme}) => theme.colors.primaryBg};
         color: ${({theme}) => theme.colors.textMain};
         line-height: 1.2;

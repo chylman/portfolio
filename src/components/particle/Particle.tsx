@@ -1,11 +1,6 @@
 import {useEffect, useMemo, useState} from "react";
 import Particles, {initParticlesEngine} from "@tsparticles/react";
-import {
-    // type Container,
-    // type ISourceOptions,
-    MoveDirection,
-    OutMode,
-} from "@tsparticles/engine";
+import {MoveDirection, OutMode} from "@tsparticles/engine";
 import {loadSlim} from "@tsparticles/slim";
 
 type OptionsType = {
@@ -89,17 +84,8 @@ export const Particle = () => {
         });
     }, []);
 
-    // const particlesLoaded = async (container?: Container): Promise<void> => {
-    //     console.log(container);
-    // };
-
     const options: OptionsType = useMemo(
         () => ({
-            // background: {
-            //     color: {
-            //         value: "#0d47a1",
-            //     },
-            // },
             fpsLimit: 120,
             interactivity: {
                 events: {
@@ -120,10 +106,10 @@ export const Particle = () => {
             },
             particles: {
                 color: {
-                    value: "#ffffff",
+                    value: "#1E0E62",
                 },
                 links: {
-                    color: "#ffffff",
+                    color: "#1E0E62",
                     distance: 250,
                     enable: true,
                     opacity: 0.4,
