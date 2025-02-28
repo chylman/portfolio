@@ -1,3 +1,5 @@
+import {MoveDirection, OutMode} from "@tsparticles/engine";
+
 export const dark = {
     name: 'dark-theme',
     colors: {
@@ -44,8 +46,66 @@ export const dark = {
     media: {
         tablet: "screen and (max-width: 1023px)",
         mobile: "screen and (max-width: 768px)"
-    }
-}
+    },
+    particlesOptions: {
+        fpsLimit: 120,
+        interactivity: {
+            events: {
+                onHover: {
+                    enable: true,
+                    mode: "repulse",
+                },
+            },
+            modes: {
+                push: {
+                    quantity: 4,
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4,
+                },
+            },
+        },
+        particles: {
+            color: {
+                value: "#1E0E62",
+            },
+            links: {
+                color: "#1E0E62",
+                distance: 250,
+                enable: true,
+                opacity: 0.4,
+                width: 1,
+            },
+            move: {
+                direction: MoveDirection.none,
+                enable: true,
+                outModes: {
+                    default: OutMode.out,
+                },
+                random: false,
+                speed: 3,
+                straight: false,
+            },
+            number: {
+                density: {
+                    enable: true,
+                },
+                value: 20,
+            },
+            opacity: {
+                value: 0.5,
+            },
+            shape: {
+                type: "square",
+            },
+            size: {
+                value: {min: 0.2, max: 1},
+            },
+        },
+        detectRetina: true,
+    },
+};
 
 export const light = {
     name: 'light-theme',
@@ -92,5 +152,63 @@ export const light = {
     media: {
         tablet: "screen and (max-width: 1023px)",
         mobile: "screen and (max-width: 768px)"
-    }
-}
+    },
+    particlesOptions: {
+        fpsLimit: 120,
+        interactivity: {
+            events: {
+                onHover: {
+                    enable: true,
+                    mode: "repulse",
+                },
+            },
+            modes: {
+                push: {
+                    quantity: 4,
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4,
+                },
+            },
+        },
+        particles: {
+            color: {
+                value: "#1E0E62",
+            },
+            links: {
+                color: "#1E0E62",
+                distance: 250,
+                enable: true,
+                opacity: 0.4,
+                width: 1,
+            },
+            move: {
+                direction: MoveDirection.none,
+                enable: true,
+                outModes: {
+                    default: OutMode.out,
+                },
+                random: false,
+                speed: 3,
+                straight: false,
+            },
+            number: {
+                density: {
+                    enable: true,
+                },
+                value: 20,
+            },
+            opacity: {
+                value: 0.5,
+            },
+            shape: {
+                type: "square",
+            },
+            size: {
+                value: {min: 0.2, max: 1},
+            },
+        },
+        detectRetina: true,
+    },
+};

@@ -11,11 +11,11 @@ import {Works} from "./layout/sections/works/Works.tsx";
 import {About} from "./layout/sections/about/About";
 import {Particle} from "./components/particle/Particle";
 import {GoTopButton} from "./components/goTopButton/GoTopButton";
-import {light} from "./styles/Theme.tsx";
+import {light, dark} from "./styles/Theme.tsx";
 
 
 function App() {
-    const [selectedTheme, setSelectedTheme] = useState(light);
+    const [selectedTheme, setSelectedTheme] = useState(dark);
     useEffect(() => {
         const currentTheme = JSON.parse(localStorage.getItem("current-theme") as string);
         if (currentTheme) {
