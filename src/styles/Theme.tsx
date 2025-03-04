@@ -68,10 +68,10 @@ export const dark = {
         },
         particles: {
             color: {
-                value: "#1E0E62",
+                value: "#ffffff",
             },
             links: {
-                color: "#1E0E62",
+                color: "#ffffff",
                 distance: 250,
                 enable: true,
                 opacity: 0.4,

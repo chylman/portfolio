@@ -23,7 +23,6 @@ export const ThemeSwitchButton: React.FC<ThemeSwitchButtonProps> = (props: Theme
     return (
         <S.ThemeSwitchButton onClick={(evt) => {
             switchTheme(theme);
-            console.log(evt.currentTarget.firstChild)
             if (evt.currentTarget.firstChild) {
                 evt.currentTarget.firstChild.setAttribute("data-theme", JSON.parse(localStorage.getItem("current-theme") as string).name);
             }

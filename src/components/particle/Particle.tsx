@@ -1,15 +1,13 @@
-import {useEffect, useMemo, useState} from "react";
+import {useEffect, useState} from "react";
 import Particles, {initParticlesEngine} from "@tsparticles/react";
 import {type ISourceOptions} from "@tsparticles/engine";
 import {loadSlim} from "@tsparticles/slim";
 import {useTheme} from 'styled-components';
 
 export const Particle = () => {
+    const theme = {...useTheme()};
     const [init, setInit] = useState(false);
-    const theme = useTheme();
     const [optionsFromTheme, setOptionsFromTheme] = useState<ISourceOptions>(theme.particlesOptions);
-    console.log('Current theme: ', theme);
-
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -22,6 +20,7 @@ export const Particle = () => {
     // const options: ISourceOptions = setOptionsFromTheme(theme.optionsFromTheme);
     {
         if (init) {
+            console.log('Current theme: ', theme);
             return (
                 <Particles
                     id="tsparticles"
